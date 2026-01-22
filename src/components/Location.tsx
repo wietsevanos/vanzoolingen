@@ -82,9 +82,13 @@ const Location = () => {
             </div>
 
             {/* Holiday notice */}
-            <p className="mt-auto pt-6 text-anthracite-light font-sans text-sm italic leading-relaxed">
-              * Openingstijden kunnen afwijken op feestdagen. Neem bij twijfel contact met ons op.
-            </p>
+            <div className="mt-auto pt-6">
+              <div className="border-2 border-olive/30 bg-olive/5 px-6 py-4">
+                <p className="text-anthracite font-sans text-sm leading-relaxed">
+                  <span className="font-medium">Let op:</span> Openingstijden kunnen afwijken op feestdagen. Neem bij twijfel gerust contact met ons op.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
