@@ -16,7 +16,7 @@ const Location = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24">
           {/* Location */}
-          <div>
+          <div className="flex flex-col">
             <div className="flex items-center gap-3 mb-6">
               <MapPin size={24} className="text-olive" strokeWidth={1.5} />
               <p className="text-olive text-sm font-sans tracking-[0.2em] uppercase">
@@ -34,7 +34,7 @@ const Location = () => {
             </address>
 
             {/* Google Maps */}
-            <div className="w-full aspect-[4/3] border-2 border-olive">
+            <div className="w-full flex-1 min-h-[300px] border-2 border-olive">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.8876812789913!2d4.615393!3d52.391889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5ef5b55555555%3A0x5555555555555555!2sBloemendaalseweg%20261%2C%202051%20GD%20Overveen!5e0!3m2!1snl!2snl!4v1700000000000!5m2!1snl!2snl"
                 width="100%"
@@ -49,7 +49,7 @@ const Location = () => {
           </div>
 
           {/* Opening Hours */}
-          <div>
+          <div className="flex flex-col">
             <div className="flex items-center gap-3 mb-6">
               <Clock size={24} className="text-olive" strokeWidth={1.5} />
               <p className="text-olive text-sm font-sans tracking-[0.2em] uppercase">
@@ -80,6 +80,11 @@ const Location = () => {
                 </tbody>
               </table>
             </div>
+
+            {/* Holiday notice */}
+            <p className="mt-auto pt-6 text-anthracite-light font-sans text-sm italic leading-relaxed">
+              * Openingstijden kunnen afwijken op feestdagen. Neem bij twijfel contact met ons op.
+            </p>
           </div>
         </div>
       </div>
