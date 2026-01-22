@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '@/assets/logo.jpg';
+import logo from '@/assets/logo.png';
 
 const navLinks = [
   { href: '#over-ons', label: 'Over Ons' },
