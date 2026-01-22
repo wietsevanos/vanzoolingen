@@ -119,7 +119,7 @@ const Contact = () => {
                 "Wij staan altijd klaar om u te helpen met persoonlijk advies en een warm welkom."
               </p>
               <p className="mt-4 text-olive font-sans text-sm tracking-wide">
-                — Team Van Zoolingen
+                Team Van Zoolingen
               </p>
             </div>
           </div>
