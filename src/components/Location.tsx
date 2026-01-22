@@ -63,10 +63,10 @@ const Location = () => {
               Openingstijden
             </h2>
 
-            {/* Spacer to align with address height */}
-            <div className="mb-6 text-base leading-relaxed invisible">
-              <br />
-            </div>
+            {/* Holiday notice - above opening hours */}
+            <p className="mb-6 text-anthracite-light font-sans text-sm italic leading-relaxed">
+              Op feestdagen gooien we de deuren soms wat eerder dicht — of juist extra wijd open. Check bij twijfel even onze socials of bel ons gerust!
+            </p>
 
             <div className="bg-offwhite shadow-lg flex-1 flex flex-col overflow-hidden">
               {openingHours.map((item, index) => {
@@ -101,10 +101,6 @@ const Location = () => {
               })}
             </div>
 
-            {/* Holiday notice */}
-            <p className="mt-6 text-anthracite-light font-sans text-sm italic leading-relaxed">
-              Openingstijden kunnen afwijken op feestdagen.
-            </p>
           </div>
         </div>
       </div>
