@@ -25,7 +25,7 @@ const Newsletter = () => {
 
           {/* Enormail Embedded Form */}
           <div className="newsletter-form-wrapper flex justify-center items-center [&>*]:mx-auto">
-            
+            <div data-enormail-webform="db516cb837a9bb07886a083b85bd25f8"></div>
           </div>
 
           <p className="text-beige/60 text-xs font-sans mt-8">
