@@ -39,10 +39,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-fade-in-slow">
-        <div className="w-px h-16 bg-beige/40" />
-      </div>
     </section>
   );
 };
