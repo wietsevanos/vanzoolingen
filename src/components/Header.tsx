@@ -24,7 +24,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
-            <img src={logo} alt="Van Zoolingen logo" className="h-12 w-auto object-contain" />
+            
             <span className="font-serif text-xl md:text-2xl font-semibold text-anthracite tracking-wide">
               Van Zoolingen
             </span>
