@@ -2,11 +2,11 @@ import { MapPin, Clock } from 'lucide-react';
 
 const openingHours = [
   { day: 'Maandag', hours: 'Gesloten', dayIndex: 1 },
-  { day: 'Dinsdag', hours: '09:30 – 18:00', dayIndex: 2 },
-  { day: 'Woensdag', hours: '09:30 – 18:00', dayIndex: 3 },
-  { day: 'Donderdag', hours: '09:30 – 18:00', dayIndex: 4 },
-  { day: 'Vrijdag', hours: '09:30 – 18:00', dayIndex: 5 },
-  { day: 'Zaterdag', hours: '09:30 – 17:00', dayIndex: 6 },
+  { day: 'Dinsdag', hours: '09:30 tot 18:00', dayIndex: 2 },
+  { day: 'Woensdag', hours: '09:30 tot 18:00', dayIndex: 3 },
+  { day: 'Donderdag', hours: '09:30 tot 18:00', dayIndex: 4 },
+  { day: 'Vrijdag', hours: '09:30 tot 18:00', dayIndex: 5 },
+  { day: 'Zaterdag', hours: '09:30 tot 17:00', dayIndex: 6 },
   { day: 'Zondag', hours: 'Gesloten', dayIndex: 0 },
 ];
 
@@ -64,9 +64,11 @@ const Location = () => {
             </h2>
 
             {/* Holiday notice - above opening hours */}
-            <p className="mb-6 text-anthracite-light font-sans text-sm italic leading-relaxed">
-              Op feestdagen gooien we de deuren soms wat eerder dicht — of juist extra wijd open. Check bij twijfel even onze socials of bel ons gerust!
-            </p>
+            <div className="mb-6 bg-olive/10 border border-olive/20 px-5 py-4">
+              <p className="text-anthracite font-sans text-sm leading-relaxed">
+                Op feestdagen gooien we de deuren soms wat eerder dicht, of juist extra wijd open. Check bij twijfel even onze socials of bel ons gerust!
+              </p>
+            </div>
 
             <div className="bg-offwhite shadow-lg flex-1 flex flex-col overflow-hidden">
               {openingHours.map((item, index) => {
