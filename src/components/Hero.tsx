@@ -5,8 +5,8 @@ const Hero = () => {
     <section className="relative min-h-screen flex items-center justify-center">
       {/* Background Image */}
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${heroBg})` }}
+        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroBg})`, backgroundColor: '#1a1a1a' }}
       >
         <div className="absolute inset-0 bg-gradient-to-b from-anthracite/70 via-anthracite/75 to-anthracite/80" />
       </div>
