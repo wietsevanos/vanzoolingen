@@ -1,5 +1,3 @@
-import storeImage from '@/assets/store.jpg';
-
 const About = () => {
   return (
     <section id="over-ons" className="py-24 lg:py-32 bg-offwhite">
@@ -39,9 +37,10 @@ const About = () => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-olive" />
               <img
-                src={storeImage}
-                alt="Wijnhandel van Zoolingen winkel"
+                src="/placeholder.svg"
+                alt="Placeholder afbeelding (upload een foto van de winkel)"
                 className="relative w-full aspect-[4/3] object-cover"
+                loading="lazy"
               />
             </div>
           </div>
