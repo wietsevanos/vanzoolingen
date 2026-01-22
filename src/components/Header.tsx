@@ -38,8 +38,19 @@ const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <a href="#nieuwsbrief" className="hidden lg:block px-6 py-3 bg-bordeaux text-primary-foreground text-sm font-medium tracking-wide uppercase hover:bg-bordeaux-dark transition-colors">
-            Nieuwsbrief
+          <a 
+            href="#nieuwsbrief" 
+            className="hidden lg:flex items-center gap-2 px-6 py-3 bg-bordeaux text-primary-foreground text-sm font-medium tracking-wide uppercase hover:bg-bordeaux-dark hover:shadow-lg hover:scale-105 transition-all duration-300 group"
+          >
+            <span>Nieuwsbrief</span>
+            <svg 
+              className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path strokeLinecap="square" strokeLinejoin="miter" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
           </a>
 
           {/* Mobile Menu Toggle */}
