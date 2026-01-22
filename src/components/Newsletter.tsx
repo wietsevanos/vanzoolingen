@@ -1,29 +1,26 @@
-import { useState } from 'react';
-import { toast } from 'sonner';
+import { useEffect } from 'react';
 
 const Newsletter = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  useEffect(() => {
+    // Check if script already exists to avoid duplicates
+    const existingScript = document.querySelector('script[src*="enormail.eu/webform.js"]');
+    if (existingScript) return;
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!name.trim() || !email.trim()) {
-      toast.error('Vul alle velden in');
-      return;
-    }
+    // Load Enormail form script
+    const script = document.createElement('script');
+    script.src = 'https://enormail.eu/webform.js?id=db516cb837a9bb07886a083b85bd25f8';
+    script.type = 'text/javascript';
+    script.async = true;
+    document.body.appendChild(script);
 
-    setIsSubmitting(true);
-    
-    // Simulate submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast.success('Bedankt voor uw inschrijving!');
-    setName('');
-    setEmail('');
-    setIsSubmitting(false);
-  };
+    return () => {
+      // Cleanup on unmount if needed
+      const scriptToRemove = document.querySelector('script[src*="enormail.eu/webform.js"]');
+      if (scriptToRemove) {
+        document.body.removeChild(scriptToRemove);
+      }
+    };
+  }, []);
 
   return (
     <section id="nieuwsbrief" className="py-24 lg:py-32 bg-olive">
@@ -40,32 +37,11 @@ const Newsletter = () => {
             Ontvang aanbiedingen, nieuwe wijnen en exclusieve acties in je inbox.
           </p>
 
-          {/* Form */}
-          <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="grid sm:grid-cols-2 gap-4">
-              <input
-                type="text"
-                placeholder="Uw naam"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="w-full px-6 py-4 bg-offwhite text-anthracite font-sans placeholder:text-anthracite-light/60 border-0 focus:outline-none focus:ring-2 focus:ring-bordeaux"
-              />
-              <input
-                type="email"
-                placeholder="Uw e-mailadres"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-6 py-4 bg-offwhite text-anthracite font-sans placeholder:text-anthracite-light/60 border-0 focus:outline-none focus:ring-2 focus:ring-bordeaux"
-              />
-            </div>
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full sm:w-auto px-12 py-4 bg-bordeaux text-primary-foreground text-base font-medium tracking-wide uppercase hover:bg-bordeaux-dark transition-colors disabled:opacity-50"
-            >
-              {isSubmitting ? 'Bezig...' : 'Inschrijven'}
-            </button>
-          </form>
+          {/* Enormail Form Container */}
+          <div className="flex justify-center [&_form]:w-full [&_input]:w-full [&_input]:px-6 [&_input]:py-4 [&_input]:bg-offwhite [&_input]:text-anthracite [&_input]:font-sans [&_input]:border-0 [&_input]:focus:outline-none [&_input]:focus:ring-2 [&_input]:focus:ring-bordeaux [&_input]:mb-4 [&_button]:w-full [&_button]:sm:w-auto [&_button]:px-12 [&_button]:py-4 [&_button]:bg-bordeaux [&_button]:text-primary-foreground [&_button]:text-base [&_button]:font-medium [&_button]:tracking-wide [&_button]:uppercase [&_button]:hover:bg-bordeaux-dark [&_button]:transition-colors [&_button]:cursor-pointer">
+            {/* Enormail will inject the form here */}
+            <div id="enormail-form-db516cb837a9bb07886a083b85bd25f8"></div>
+          </div>
 
           <p className="text-beige/60 text-xs font-sans mt-8">
             Wij respecteren uw privacy. U kunt zich op elk moment uitschrijven.
