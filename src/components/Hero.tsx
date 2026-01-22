@@ -14,7 +14,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 text-center">
         <div className="max-w-4xl mx-auto animate-fade-in">
-          <p className="text-olive-light text-sm md:text-base font-sans tracking-[0.3em] uppercase mb-6 drop-shadow-lg">
+          <p className="text-olive-light text-base md:text-lg font-sans font-semibold tracking-[0.3em] uppercase mb-6 drop-shadow-lg">
             Wijnhandel · Slijterij
           </p>
           
