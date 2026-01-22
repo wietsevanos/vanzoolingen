@@ -1,15 +1,32 @@
-import { useEffect } from 'react';
+import { useState } from 'react';
+import { toast } from 'sonner';
+
 const Newsletter = () => {
-  useEffect(() => {
-    // Re-initialize Enormail form when component mounts
-    const script = document.querySelector('script[src*="enormail"]');
-    if (script) {
-      // Trigger re-render of Enormail form
-      const event = new Event('DOMContentLoaded');
-      document.dispatchEvent(event);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!name.trim() || !email.trim()) {
+      toast.error('Vul alle velden in');
+      return;
     }
-  }, []);
-  return <section id="nieuwsbrief" className="py-24 lg:py-32 bg-olive">
+
+    setIsSubmitting(true);
+    
+    // Simulate submission
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    toast.success('Bedankt voor uw inschrijving!');
+    setName('');
+    setEmail('');
+    setIsSubmitting(false);
+  };
+
+  return (
+    <section id="nieuwsbrief" className="py-24 lg:py-32 bg-olive">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-2xl mx-auto text-center">
           {/* Header */}
@@ -23,16 +40,40 @@ const Newsletter = () => {
             Ontvang aanbiedingen, nieuwe wijnen en exclusieve acties in je inbox.
           </p>
 
-          {/* Enormail Embedded Form */}
-          <div className="newsletter-form-wrapper flex justify-center items-center [&>*]:mx-auto">
-            <div data-enormail-webform="db516cb837a9bb07886a083b85bd25f8"></div>
-          </div>
+          {/* Form */}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid sm:grid-cols-2 gap-4">
+              <input
+                type="text"
+                placeholder="Uw naam"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full px-6 py-4 bg-offwhite text-anthracite font-sans placeholder:text-anthracite-light/60 border-0 focus:outline-none focus:ring-2 focus:ring-bordeaux"
+              />
+              <input
+                type="email"
+                placeholder="Uw e-mailadres"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full px-6 py-4 bg-offwhite text-anthracite font-sans placeholder:text-anthracite-light/60 border-0 focus:outline-none focus:ring-2 focus:ring-bordeaux"
+              />
+            </div>
+            <button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full sm:w-auto px-12 py-4 bg-bordeaux text-primary-foreground text-base font-medium tracking-wide uppercase hover:bg-bordeaux-dark transition-colors disabled:opacity-50"
+            >
+              {isSubmitting ? 'Bezig...' : 'Inschrijven'}
+            </button>
+          </form>
 
           <p className="text-beige/60 text-xs font-sans mt-8">
             Wij respecteren uw privacy. U kunt zich op elk moment uitschrijven.
           </p>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Newsletter;

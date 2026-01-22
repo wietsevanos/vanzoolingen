@@ -22,8 +22,12 @@ const Hero = () => {
             Welkom bij Wijnhandel<br />van Zoolingen
           </h1>
           
-          <p className="font-serif text-xl md:text-2xl text-beige italic mb-12 drop-shadow-lg">
-            Persoonlijk geselecteerde kwaliteitswijnen
+          <p className="font-serif text-xl md:text-2xl text-beige italic mb-4 drop-shadow-lg">
+            Toegankelijke, moderne en klassieke wijnhandel
+          </p>
+          
+          <p className="text-beige-warm text-base md:text-lg font-sans mb-12 max-w-2xl mx-auto drop-shadow-md">
+            Ontdek wijnen uit de oude en nieuwe wereld
           </p>
           
           <a
