@@ -1,3 +1,5 @@
+import aboutPhoto from "@/assets/about-photo.png";
+
 const About = () => {
   return (
     <section id="over-ons" className="py-24 lg:py-32 bg-offwhite">
@@ -37,8 +39,8 @@ const About = () => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-full h-full border-2 border-olive" />
               <img
-                src="/placeholder.svg"
-                alt="Placeholder afbeelding (upload een foto van de winkel)"
+                src={aboutPhoto}
+                alt="Foto van wijnhandel Van Zoolingen"
                 className="relative w-full aspect-[4/3] object-cover"
                 loading="lazy"
               />
