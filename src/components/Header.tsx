@@ -22,7 +22,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="Van Zoolingen logo" 
-              className="h-20 w-auto object-contain"
+              className="h-14 w-auto object-contain"
             />
             <span className="font-serif text-xl md:text-2xl font-semibold text-anthracite tracking-wide pb-3">
               Van Zoolingen
