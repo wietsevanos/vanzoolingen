@@ -16,21 +16,21 @@ const Header = () => {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-offwhite/95 backdrop-blur-sm border-b-2 border-bordeaux">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-end justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-end gap-3 mb-3">
+          <a href="#" className="flex items-end gap-3 mb-[2px]">
             <img 
               src={logo} 
               alt="Van Zoolingen logo" 
-              className="h-14 w-auto object-contain"
+              className="h-20 w-auto object-contain"
             />
-            <span className="font-serif text-xl md:text-2xl font-semibold text-anthracite tracking-wide">
+            <span className="font-serif text-xl md:text-2xl font-semibold text-anthracite tracking-wide pb-3">
               Van Zoolingen
             </span>
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-10 pb-3">
             {navLinks.map((link) => (
               <a
                 key={link.href}
@@ -45,7 +45,7 @@ const Header = () => {
           {/* CTA Button */}
           <a
             href="#nieuwsbrief"
-            className="hidden lg:block px-6 py-3 bg-bordeaux text-primary-foreground text-sm font-medium tracking-wide uppercase hover:bg-bordeaux-dark transition-colors"
+            className="hidden lg:block px-6 py-3 mb-3 bg-bordeaux text-primary-foreground text-sm font-medium tracking-wide uppercase hover:bg-bordeaux-dark transition-colors"
           >
             Nieuwsbrief
           </a>
@@ -53,7 +53,7 @@ const Header = () => {
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="lg:hidden p-2 text-anthracite"
+            className="lg:hidden p-2 text-anthracite pb-3"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
