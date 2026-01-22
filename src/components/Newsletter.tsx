@@ -1,6 +1,15 @@
+import { useEffect } from 'react';
 const Newsletter = () => {
-  return (
-    <section id="nieuwsbrief" className="py-24 lg:py-32 bg-olive">
+  useEffect(() => {
+    // Re-initialize Enormail form when component mounts
+    const script = document.querySelector('script[src*="enormail"]');
+    if (script) {
+      // Trigger re-render of Enormail form
+      const event = new Event('DOMContentLoaded');
+      document.dispatchEvent(event);
+    }
+  }, []);
+  return <section id="nieuwsbrief" className="py-24 lg:py-32 bg-olive">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-2xl mx-auto text-center">
           {/* Header */}
@@ -14,17 +23,9 @@ const Newsletter = () => {
             Ontvang aanbiedingen, nieuwe wijnen en exclusieve acties in je inbox.
           </p>
 
-          {/* Enormail Iframe Embed */}
-          <div className="flex justify-center">
-            <iframe
-              src="https://enormail.eu/webform/db516cb837a9bb07886a083b85bd25f8"
-              width="100%"
-              height="300"
-              frameBorder="0"
-              scrolling="no"
-              className="max-w-md w-full bg-offwhite rounded-none"
-              title="Nieuwsbrief inschrijving"
-            />
+          {/* Enormail Embedded Form */}
+          <div className="newsletter-form-wrapper flex justify-center items-center [&>*]:mx-auto">
+            <div data-enormail-webform="db516cb837a9bb07886a083b85bd25f8"></div>
           </div>
 
           <p className="text-beige/60 text-xs font-sans mt-8">
@@ -32,8 +33,6 @@ const Newsletter = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Newsletter;
