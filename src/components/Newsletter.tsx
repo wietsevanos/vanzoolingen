@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-
 const Newsletter = () => {
   useEffect(() => {
     // Re-initialize Enormail form when component mounts
@@ -10,9 +9,7 @@ const Newsletter = () => {
       document.dispatchEvent(event);
     }
   }, []);
-
-  return (
-    <section id="nieuwsbrief" className="py-24 lg:py-32 bg-olive">
+  return <section id="nieuwsbrief" className="py-24 lg:py-32 bg-olive">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-2xl mx-auto text-center">
           {/* Header */}
@@ -28,7 +25,7 @@ const Newsletter = () => {
 
           {/* Enormail Embedded Form */}
           <div className="newsletter-form-wrapper flex justify-center items-center [&>*]:mx-auto">
-            <div data-enormail-webform="db516cb837a9bb07886a083b85bd25f8"></div>
+            
           </div>
 
           <p className="text-beige/60 text-xs font-sans mt-8">
@@ -36,8 +33,6 @@ const Newsletter = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Newsletter;
