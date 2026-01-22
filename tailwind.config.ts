@@ -78,6 +78,7 @@ export default {
           DEFAULT: "hsl(var(--anthracite))",
           light: "hsl(var(--anthracite-light))",
         },
+        "badge-today": "hsl(var(--badge-today))",
       },
       borderRadius: {
         lg: "var(--radius)",

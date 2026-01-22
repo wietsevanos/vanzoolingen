@@ -1,16 +1,18 @@
 import { MapPin, Clock } from 'lucide-react';
 
 const openingHours = [
-  { day: 'Maandag', hours: 'Gesloten' },
-  { day: 'Dinsdag', hours: '09:30 – 18:00' },
-  { day: 'Woensdag', hours: '09:30 – 18:00' },
-  { day: 'Donderdag', hours: '09:30 – 18:00' },
-  { day: 'Vrijdag', hours: '09:30 – 18:00' },
-  { day: 'Zaterdag', hours: '09:30 – 17:00' },
-  { day: 'Zondag', hours: 'Gesloten' },
+  { day: 'Maandag', hours: 'Gesloten', dayIndex: 1 },
+  { day: 'Dinsdag', hours: '09:30 – 18:00', dayIndex: 2 },
+  { day: 'Woensdag', hours: '09:30 – 18:00', dayIndex: 3 },
+  { day: 'Donderdag', hours: '09:30 – 18:00', dayIndex: 4 },
+  { day: 'Vrijdag', hours: '09:30 – 18:00', dayIndex: 5 },
+  { day: 'Zaterdag', hours: '09:30 – 17:00', dayIndex: 6 },
+  { day: 'Zondag', hours: 'Gesloten', dayIndex: 0 },
 ];
 
 const Location = () => {
+  const today = new Date().getDay();
+
   return (
     <section id="locatie" className="py-24 lg:py-32 bg-beige">
       <div className="container mx-auto px-6 lg:px-12">
@@ -50,35 +52,56 @@ const Location = () => {
 
           {/* Opening Hours */}
           <div className="flex flex-col">
-            <div className="flex items-center gap-3 mb-6">
-              <Clock size={24} className="text-olive" strokeWidth={1.5} />
-              <p className="text-olive text-sm font-sans tracking-[0.2em] uppercase">
-                Wanneer
-              </p>
+            <div className="flex items-center gap-3 mb-8">
+              <Clock size={28} className="text-olive" strokeWidth={1.5} />
+              <h2 className="font-serif text-3xl md:text-4xl text-anthracite font-medium">
+                Openingstijden
+              </h2>
             </div>
-            
-            <h2 className="font-serif text-3xl md:text-4xl text-anthracite font-medium mb-8">
-              Openingstijden
-            </h2>
 
-            <div className="border-4 border-bordeaux bg-offwhite">
-              <table className="w-full">
-                <tbody>
-                  {openingHours.map((item, index) => (
-                    <tr 
+            <div className="border-4 border-bordeaux bg-offwhite flex-1 flex flex-col">
+              <div className="flex-1">
+                {openingHours.map((item, index) => {
+                  const isToday = item.dayIndex === today;
+                  const isClosed = item.hours === 'Gesloten';
+                  
+                  return (
+                    <div
                       key={item.day}
-                      className={index !== openingHours.length - 1 ? 'border-b border-border' : ''}
+                      className={`
+                        flex items-center justify-between px-6 py-4
+                        ${index !== openingHours.length - 1 ? 'border-b border-beige-warm' : ''}
+                        ${isToday ? 'bg-olive text-offwhite' : ''}
+                      `}
                     >
-                      <td className="px-6 py-4 font-sans text-anthracite font-medium">
-                        {item.day}
-                      </td>
-                      <td className={`px-6 py-4 font-sans text-right ${item.hours === 'Gesloten' ? 'text-anthracite-light' : 'text-anthracite'}`}>
+                      <div className="flex items-center gap-3">
+                        <span className={`font-sans font-medium ${isToday ? 'text-offwhite' : 'text-anthracite'}`}>
+                          {item.day}
+                        </span>
+                        {isToday && (
+                          <span className="bg-badge-today text-anthracite text-xs font-semibold px-2 py-0.5 uppercase tracking-wide">
+                            Vandaag
+                          </span>
+                        )}
+                      </div>
+                      <span className={`font-sans ${isToday ? 'text-offwhite font-medium' : isClosed ? 'text-anthracite-light' : 'text-anthracite'}`}>
                         {item.hours}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+
+              {/* Address footer */}
+              <div className="border-t-2 border-beige-warm bg-beige/50 px-6 py-4">
+                <div className="flex items-start gap-3">
+                  <MapPin size={18} className="text-olive mt-0.5 flex-shrink-0" strokeWidth={1.5} />
+                  <address className="not-italic font-sans text-sm text-anthracite leading-relaxed">
+                    Bloemendaalseweg 261<br />
+                    2051 GD Overveen
+                  </address>
+                </div>
+              </div>
             </div>
 
             {/* Holiday notice */}
