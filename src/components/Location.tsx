@@ -34,7 +34,7 @@ const Location = () => {
             </address>
 
             {/* Google Maps */}
-            <div className="w-full flex-1 min-h-[300px] border-2 border-olive">
+            <div className="w-full flex-1 min-h-[300px] border-4 border-olive">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2434.8876812789913!2d4.615393!3d52.391889!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c5ef5b55555555%3A0x5555555555555555!2sBloemendaalseweg%20261%2C%202051%20GD%20Overveen!5e0!3m2!1snl!2snl!4v1700000000000!5m2!1snl!2snl"
                 width="100%"
@@ -61,7 +61,7 @@ const Location = () => {
               Openingstijden
             </h2>
 
-            <div className="border-2 border-olive bg-offwhite">
+            <div className="border-4 border-bordeaux bg-offwhite">
               <table className="w-full">
                 <tbody>
                   {openingHours.map((item, index) => (
