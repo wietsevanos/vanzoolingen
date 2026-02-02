@@ -1,4 +1,4 @@
-import { Facebook, Instagram, Phone } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -58,10 +58,15 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Copyright */}
-          <p className="text-beige/50 text-sm font-sans">
-            © {new Date().getFullYear()} Wijnhandel van Zoolingen
-          </p>
+          {/* Copyright & KVK */}
+          <div className="text-center md:text-right">
+            <p className="text-beige/50 text-sm font-sans">
+              © {new Date().getFullYear()} Wijnhandel van Zoolingen
+            </p>
+            <p className="text-beige/40 text-xs font-sans mt-1">
+              KVK: 61120707
+            </p>
+          </div>
         </div>
       </div>
     </footer>
