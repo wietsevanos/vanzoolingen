@@ -11,7 +11,7 @@ const Footer = () => {
               Van Zoolingen
             </p>
             <p className="text-beige/60 text-sm font-sans mt-1">
-              Wijnhandel · Slijterij
+              Wijnhandel - Slijterij
             </p>
           </div>
 
