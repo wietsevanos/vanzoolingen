@@ -1,4 +1,5 @@
 import heroBg from '@/assets/hero-bg.png';
+import heroLogo from '@/assets/hero-logo.png';
 
 const Hero = () => {
   return (
@@ -13,14 +14,13 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <p className="text-olive-light text-base md:text-lg font-sans font-semibold tracking-[0.3em] uppercase mb-6 drop-shadow-lg">
-            Wijnhandel · Slijterij
-          </p>
-          
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl text-offwhite font-medium leading-tight mb-6 drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
-            Welkom bij Wijnhandel<br />van Zoolingen
-          </h1>
+        <div className="max-w-5xl mx-auto animate-fade-in">
+          {/* Logo */}
+          <img 
+            src={heroLogo} 
+            alt="Van Zoolingen - Wijnhandel Slijterij" 
+            className="w-full max-w-2xl lg:max-w-3xl mx-auto mb-8 drop-shadow-[0_4px_20px_rgba(0,0,0,0.3)]"
+          />
           
           <p className="font-serif text-xl md:text-2xl text-beige italic mb-12 drop-shadow-lg">
             Persoonlijk geselecteerde kwaliteitswijnen
