@@ -24,7 +24,7 @@ const Hero = () => {
             />
           </div>
           
-          <p className="font-serif text-xl md:text-2xl text-olive-light italic mb-12 drop-shadow-lg">
+          <p className="font-serif text-xl md:text-2xl text-olive-light font-semibold mb-12 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
             Met passie geproefd, met zorg geselecteerd
           </p>
           
