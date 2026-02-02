@@ -14,17 +14,13 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 lg:px-12 text-center">
-        <div className="max-w-4xl mx-auto animate-fade-in">
-          <p className="text-olive-light text-base md:text-lg font-sans font-semibold tracking-[0.3em] uppercase mb-6 drop-shadow-lg">
-            Wijnhandel · Slijterij
-          </p>
-          
+        <div className="max-w-6xl mx-auto animate-fade-in">
           {/* Logo */}
           <div className="mb-8">
             <img 
               src={heroLogo} 
               alt="Van Zoolingen Wijnhandel-Slijterij" 
-              className="w-full max-w-2xl lg:max-w-3xl mx-auto h-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] invert"
+              className="w-full max-w-4xl lg:max-w-5xl mx-auto h-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] invert"
             />
           </div>
           
