@@ -90,7 +90,7 @@ const Location = () => {
                         {item.day}
                       </span>
                       {isToday && (
-                        <span className="bg-badge-today text-anthracite text-xs font-semibold px-2 py-0.5 uppercase tracking-wide">
+                        <span className="bg-badge-today text-anthracite text-xs font-semibold px-2 py-1 uppercase tracking-wide inline-flex items-center justify-center leading-none">
                           Vandaag
                         </span>
                       )}
