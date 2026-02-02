@@ -1,35 +1,25 @@
-import { Wine, Sparkles, GlassWater, Cylinder, Beer, Gift } from 'lucide-react';
+import { Wine, Sparkles, GlassWater, WineOff } from 'lucide-react';
 
 const assortmentItems = [
   {
     icon: Wine,
     title: 'Wijnen',
-    description: 'Selectie uit de oude en nieuwe wereld',
+    brands: 'Coppola, Bernardus, Louis Jadot, Gaja, Antinori, Boschendal, J.Lohr, Waterkloof, Whispering Angel, Jordan, Meerlust, Rothschild',
   },
   {
     icon: Sparkles,
     title: 'Champagne',
-    description: 'Verfijnde bubbels voor elk moment',
+    brands: 'Moët & Chandon, Veuve Clicquot, Ruinart, Laurent Perrier, Krug, Dom Pérignon',
   },
   {
     icon: GlassWater,
-    title: 'Likeuren',
-    description: 'Klassieke en moderne likeuren',
+    title: 'Gedistilleerd',
+    brands: 'Breed assortiment whisky, cognac en likeuren',
   },
   {
-    icon: Cylinder,
-    title: 'Cognac & Whisky',
-    description: 'Premium spirits voor de kenner',
-  },
-  {
-    icon: Beer,
-    title: 'Bier',
-    description: 'Speciaalbieren en klassiekers',
-  },
-  {
-    icon: Gift,
-    title: 'Kerst- en Relatiegeschenken',
-    description: 'Stijlvolle cadeaupakketten',
+    icon: WineOff,
+    title: 'Accessoires & Glaswerk',
+    brands: 'Glazen, karaffen en wijnaccessoires',
   },
 ];
 
@@ -38,7 +28,7 @@ const Assortment = () => {
     <section id="assortiment" className="py-24 lg:py-32 bg-beige">
       <div className="container mx-auto px-6 lg:px-12">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <p className="text-olive text-sm font-sans tracking-[0.2em] uppercase mb-4">
             Onze Collectie
           </p>
@@ -47,25 +37,25 @@ const Assortment = () => {
           </h2>
         </div>
 
-        {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Grid - 2x2 for clean layout */}
+        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 max-w-5xl mx-auto">
           {assortmentItems.map((item) => (
             <div
               key={item.title}
-              className="bg-offwhite p-8 border-2 border-olive hover:border-bordeaux transition-colors group"
+              className="bg-offwhite p-10 lg:p-12 border-2 border-olive/20 hover:border-bordeaux/40 transition-colors group"
             >
-              <div className="mb-6">
+              <div className="mb-8">
                 <item.icon 
-                  size={40} 
-                  strokeWidth={1.5}
+                  size={36} 
+                  strokeWidth={1.2}
                   className="text-olive group-hover:text-bordeaux transition-colors" 
                 />
               </div>
-              <h3 className="font-serif text-xl text-anthracite font-medium mb-3">
+              <h3 className="font-serif text-2xl text-anthracite font-medium mb-4">
                 {item.title}
               </h3>
-              <p className="text-anthracite-light font-sans text-sm leading-relaxed">
-                {item.description}
+              <p className="text-anthracite-light font-sans text-sm leading-relaxed tracking-wide">
+                {item.brands}
               </p>
             </div>
           ))}
