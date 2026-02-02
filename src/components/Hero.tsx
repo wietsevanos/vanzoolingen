@@ -1,4 +1,5 @@
 import heroBg from '@/assets/hero-bg.png';
+import heroLogo from '@/assets/hero-logo.png';
 
 const Hero = () => {
   return (
@@ -18,9 +19,14 @@ const Hero = () => {
             Wijnhandel · Slijterij
           </p>
           
-          <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl text-offwhite font-medium leading-tight mb-6 drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)]">
-            Welkom bij Wijnhandel<br />van Zoolingen
-          </h1>
+          {/* Logo */}
+          <div className="mb-8">
+            <img 
+              src={heroLogo} 
+              alt="Van Zoolingen Wijnhandel-Slijterij" 
+              className="w-full max-w-2xl lg:max-w-3xl mx-auto h-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] invert"
+            />
+          </div>
           
           <p className="font-serif text-xl md:text-2xl text-beige italic mb-12 drop-shadow-lg">
             Persoonlijk geselecteerde kwaliteitswijnen
