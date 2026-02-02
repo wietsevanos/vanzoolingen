@@ -24,8 +24,8 @@ const Hero = () => {
             />
           </div>
           
-          <p className="font-serif text-xl md:text-2xl text-beige italic mb-12 drop-shadow-lg">
-            Persoonlijk geselecteerde kwaliteitswijnen
+          <p className="font-serif text-xl md:text-2xl text-olive-light italic mb-12 drop-shadow-lg">
+            Met passie geproefd, met zorg geselecteerd
           </p>
           
           <a
