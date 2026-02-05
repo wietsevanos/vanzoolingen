@@ -1,10 +1,11 @@
 import { Facebook, Instagram } from 'lucide-react';
+import nix18Logo from '@/assets/nix18-logo.png';
 
 const Footer = () => {
   return (
     <footer className="py-12 bg-anthracite">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {/* Logo / Name */}
           <div className="text-center md:text-left">
             <p className="font-serif text-2xl text-offwhite font-medium tracking-wide">
@@ -15,8 +16,8 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Social Links */}
-          <div className="flex items-center gap-6">
+          {/* Social Links - Center */}
+          <div className="flex items-center justify-center gap-6">
             <a
               href="https://nl-nl.facebook.com/wijnhandelvanzoolingen"
               target="_blank"
@@ -58,15 +59,29 @@ const Footer = () => {
             </a>
           </div>
 
-          {/* Copyright & KVK */}
-          <div className="text-center md:text-right">
-            <p className="text-beige/50 text-sm font-sans">
-              © {new Date().getFullYear()} Wijnhandel van Zoolingen
-            </p>
-            <p className="text-beige/40 text-xs font-sans mt-1">
-              KVK: 61120707
-            </p>
+          {/* NIX18 Block - Right */}
+          <div className="flex flex-col items-center md:items-end text-center md:text-right">
+            <img 
+              src={nix18Logo} 
+              alt="NIX18" 
+              className="h-8 md:h-10 w-auto mb-3"
+            />
+            <div className="text-beige/50 text-xs font-sans space-y-0.5 leading-relaxed">
+              <p>18+, verkoop van alcohol uitsluitend aan volwassenen</p>
+              <p>Geen alcohol onder de 18 jaar</p>
+              <p>Legitimeren verplicht tot 25 jaar</p>
+            </div>
           </div>
+        </div>
+
+        {/* Copyright & KVK */}
+        <div className="mt-10 pt-6 border-t border-beige/10 text-center">
+          <p className="text-beige/50 text-sm font-sans">
+            © {new Date().getFullYear()} Wijnhandel van Zoolingen
+          </p>
+          <p className="text-beige/40 text-xs font-sans mt-1">
+            KVK: 61120707
+          </p>
         </div>
       </div>
     </footer>
