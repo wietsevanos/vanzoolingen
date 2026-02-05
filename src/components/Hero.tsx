@@ -1,14 +1,17 @@
 import heroBg from '@/assets/hero-bg.png';
 import heroLogo from '@/assets/hero-logo.png';
+import nix18Logo from '@/assets/nix18-logo.png';
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center">
       {/* 18+ Badge */}
       <div className="absolute top-24 right-4 md:top-28 md:right-6 z-20">
-        <span className="bg-offwhite text-anthracite text-xs md:text-sm font-sans font-semibold px-3 py-1.5 border border-bordeaux/30 shadow-md">
-          18+ / NIX18
-        </span>
+        <img 
+          src={nix18Logo} 
+          alt="NIX18 - 18+" 
+          className="h-6 md:h-8 w-auto"
+        />
       </div>
 
       {/* Background Image */}
