@@ -5,8 +5,8 @@ const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center">
       {/* 18+ Badge */}
-      <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20">
-        <span className="bg-anthracite/80 text-offwhite text-xs md:text-sm font-sans font-medium px-3 py-1.5 backdrop-blur-sm border border-beige/20">
+      <div className="absolute top-24 right-4 md:top-28 md:right-6 z-20">
+        <span className="bg-offwhite text-anthracite text-xs md:text-sm font-sans font-semibold px-3 py-1.5 border border-bordeaux/30 shadow-md">
           18+ / NIX18
         </span>
       </div>
