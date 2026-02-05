@@ -7,10 +7,12 @@ import Newsletter from '@/components/Newsletter';
 import Location from '@/components/Location';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import AgeVerification from '@/components/AgeVerification';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-offwhite">
+      <AgeVerification />
       <Header />
       <main>
         <Hero />
