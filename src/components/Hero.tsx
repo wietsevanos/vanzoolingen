@@ -4,6 +4,13 @@ import heroLogo from '@/assets/hero-logo.png';
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center">
+      {/* 18+ Badge */}
+      <div className="absolute top-4 right-4 md:top-6 md:right-6 z-20">
+        <span className="bg-anthracite/80 text-offwhite text-xs md:text-sm font-sans font-medium px-3 py-1.5 backdrop-blur-sm border border-beige/20">
+          18+ / NIX18
+        </span>
+      </div>
+
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
