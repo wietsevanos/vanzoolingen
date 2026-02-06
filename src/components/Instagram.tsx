@@ -26,7 +26,7 @@ const Instagram = () => {
           </p>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <iframe
             onLoad={(e) => {
               if (typeof (window as any).iFrameSetup === 'function') {
