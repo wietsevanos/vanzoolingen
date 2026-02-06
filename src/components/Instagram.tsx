@@ -1,20 +1,26 @@
-import { Instagram as InstagramIcon } from 'lucide-react';
+import { Instagram as InstagramIcon, Play } from 'lucide-react';
+import instagramPost1 from '@/assets/instagram-post-1.jpeg';
+import instagramPost2 from '@/assets/instagram-post-2.jpeg';
 
 const instagramPosts = [
   {
     url: 'https://www.instagram.com/p/DT-R54AiK_l/',
-    image: '/placeholder.svg',
-    alt: 'Instagram post 1',
+    image: instagramPost1,
+    alt: 'We are hiring - Winkelmedewerker gezocht',
+    type: 'image' as const,
   },
   {
     url: 'https://www.instagram.com/reel/DQ2eCw6DZHZ/',
-    image: '/placeholder.svg',
-    alt: 'Instagram post 2',
+    video: '/videos/instagram-reel.mp4',
+    image: null,
+    alt: 'Instagram Reel',
+    type: 'video' as const,
   },
   {
     url: 'https://www.instagram.com/p/DQgd0oyDabG/',
-    image: '/placeholder.svg',
-    alt: 'Instagram post 3',
+    image: instagramPost2,
+    alt: 'Geschenken - Feestelijk aanbod',
+    type: 'image' as const,
   },
 ];
 
@@ -42,11 +48,30 @@ const Instagram = () => {
               rel="noopener noreferrer"
               className="group relative aspect-square overflow-hidden bg-beige"
             >
-              <img
-                src={post.image}
-                alt={post.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-              />
+              {post.type === 'video' ? (
+                <>
+                  <video
+                    src={post.video}
+                    muted
+                    playsInline
+                    loop
+                    className="w-full h-full object-cover"
+                    onMouseEnter={(e) => e.currentTarget.play()}
+                    onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }}
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                    <div className="w-12 h-12 bg-offwhite/80 flex items-center justify-center group-hover:opacity-0 transition-opacity duration-300">
+                      <Play size={20} className="text-anthracite ml-0.5" fill="currentColor" />
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <img
+                  src={post.image!}
+                  alt={post.alt}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+              )}
               <div className="absolute inset-0 bg-anthracite/0 group-hover:bg-anthracite/30 transition-colors duration-300 flex items-center justify-center">
                 <InstagramIcon
                   size={32}
