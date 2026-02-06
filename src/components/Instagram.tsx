@@ -28,7 +28,7 @@ const Instagram = () => {
             @wijnhandelvanzoolingen
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-anthracite font-medium">
-            Volg ons op Instagram
+            Een kijkje achter de kurk
           </h2>
         </div>
 
