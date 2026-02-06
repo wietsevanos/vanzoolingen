@@ -28,64 +28,73 @@ const Instagram = () => {
         {/* Section header */}
         <div className="text-center mb-16">
           <p className="text-olive text-sm font-sans tracking-[0.2em] uppercase mb-4">
-            @wijnhandelvanzoolingen
+            Blijf op de hoogte
           </p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-anthracite font-medium">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-anthracite font-medium mb-4">
             Een kijkje achter de kurk
           </h2>
+          <p className="text-anthracite/70 font-sans text-sm md:text-base max-w-xl mx-auto leading-relaxed">
+            Proeverijen, nieuwe wijnen, tips en een blik achter de schermen. Volg ons en ontdek wat er speelt bij Van Zoolingen.
+          </p>
         </div>
 
         {/* Instagram widget card */}
-        <div className="max-w-md mx-auto bg-white border border-border shadow-lg overflow-hidden">
+        <div className="max-w-3xl mx-auto bg-offwhite border border-border shadow-md overflow-hidden">
           {/* Gradient header bar */}
           <div
-            className="flex items-center justify-between px-4 py-2.5"
+            className="flex items-center justify-between px-6 py-3"
             style={{
               background: 'linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)',
             }}
           >
-            <div className="flex items-center gap-2">
-              <InstagramIcon size={16} className="text-white" />
+            <div className="flex items-center gap-2.5">
+              <InstagramIcon size={18} className="text-white" />
               <span className="text-white text-sm font-sans font-medium">
                 @wijnhandelvanzoolingen
               </span>
             </div>
-            <InstagramIcon size={20} className="text-white/80" />
+            <InstagramIcon size={22} className="text-white/80" />
           </div>
 
           {/* Profile section */}
-          <div className="flex items-center gap-4 px-5 py-5">
-            <div className="w-16 h-16 shrink-0 overflow-hidden border-2 border-border" style={{ borderRadius: '50%' }}>
+          <div className="flex items-center gap-6 px-6 md:px-8 py-6 md:py-8">
+            <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 overflow-hidden border-2 border-border" style={{ borderRadius: '50%' }}>
               <img
                 src={logoImage}
                 alt="Wijnhandel van Zoolingen"
                 className="w-full h-full object-cover"
               />
             </div>
-            <div>
-              <p className="text-anthracite text-sm font-sans font-bold leading-tight">
+            <div className="flex-1">
+              <p className="text-anthracite text-base md:text-lg font-sans font-bold leading-tight">
                 wijnhandelvanzoolingen
               </p>
-              <p className="text-anthracite-light/70 text-xs font-sans mt-0.5">
-                Wijnhandel van Zoolingen
+              <p className="text-anthracite-light/60 text-sm font-sans mt-1">
+                Wijnhandel &amp; Slijterij van Zoolingen
               </p>
-              <div className="flex items-center gap-4 mt-2">
-                <span className="text-anthracite text-xs font-sans">
-                  <strong className="font-semibold">3</strong> berichten
+              <p className="text-anthracite/70 text-xs font-sans mt-1">
+                📍 Hillegom
+              </p>
+              <div className="flex items-center gap-6 mt-3">
+                <span className="text-anthracite text-sm font-sans">
+                  <strong className="font-semibold">61</strong> berichten
+                </span>
+                <span className="text-anthracite text-sm font-sans">
+                  <strong className="font-semibold">706</strong> volgers
                 </span>
               </div>
             </div>
           </div>
 
           {/* Posts grid */}
-          <div className="grid grid-cols-3 gap-[2px]">
+          <div className="grid grid-cols-3 gap-[3px]">
             {instagramPosts.map((post, index) => (
               <a
                 key={index}
                 href={post.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="relative aspect-square overflow-hidden bg-beige group"
+                className="relative aspect-square overflow-hidden bg-beige-warm group"
               >
                 {post.type === 'video' ? (
                   <video
@@ -116,7 +125,7 @@ const Instagram = () => {
             href="https://www.instagram.com/wijnhandelvanzoolingen/"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 py-4 text-anthracite-light/70 hover:text-anthracite font-sans text-sm transition-colors border-t border-border"
+            className="flex items-center justify-center gap-2 py-5 text-anthracite-light hover:text-anthracite font-sans text-sm transition-colors border-t border-border"
           >
             <span>Bekijk op Instagram</span>
             <ExternalLink size={14} />
