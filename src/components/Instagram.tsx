@@ -58,12 +58,21 @@ const Instagram = () => {
 
           {/* Profile section */}
           <div className="flex items-center gap-6 px-6 md:px-8 py-6 md:py-8">
-            <div className="w-20 h-20 md:w-24 md:h-24 shrink-0 overflow-hidden border-2 border-border" style={{ borderRadius: '50%' }}>
-              <img
-                src={logoImage}
-                alt="Wijnhandel van Zoolingen"
-                className="w-full h-full object-cover"
-              />
+            <div
+              className="w-20 h-20 md:w-24 md:h-24 shrink-0 p-[3px] overflow-hidden"
+              style={{
+                borderRadius: '50%',
+                background: 'linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)',
+              }}
+            >
+              <div className="w-full h-full overflow-hidden bg-offwhite" style={{ borderRadius: '50%', padding: '3px' }}>
+                <img
+                  src={logoImage}
+                  alt="Wijnhandel van Zoolingen"
+                  className="w-full h-full object-cover"
+                  style={{ borderRadius: '50%' }}
+                />
+              </div>
             </div>
             <div className="flex-1">
               <p className="text-anthracite text-base md:text-lg font-sans font-bold leading-tight">
