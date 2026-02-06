@@ -73,7 +73,7 @@ const Instagram = () => {
                 Wijnhandel &amp; Slijterij van Zoolingen
               </p>
               <p className="text-anthracite/70 text-xs font-sans mt-1">
-                📍 Hillegom
+                📍 Overveen
               </p>
               <div className="flex items-center gap-6 mt-3">
                 <span className="text-anthracite text-sm font-sans">
