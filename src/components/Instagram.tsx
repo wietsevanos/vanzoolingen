@@ -1,31 +1,38 @@
-import { useEffect, useRef } from 'react';
-import { Instagram as InstagramIcon, ExternalLink } from 'lucide-react';
+import { Instagram as InstagramIcon } from 'lucide-react';
+
+import storyImg1 from '@/assets/insta-story-1.jpg';
+import storyImg2 from '@/assets/insta-story-2.jpg';
+import storyImg3 from '@/assets/insta-story-3.jpg';
+import storyImg4 from '@/assets/insta-story-4.jpg';
+import postHiring from '@/assets/insta-post-hiring.jpg';
+import postProeverij from '@/assets/insta-post-proeverij.jpg';
+import postGeschenken from '@/assets/insta-post-geschenken.jpg';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/wijnhandelvanzoolingen/';
 
-const posts = [
-  {
-    id: 'DT-R54AiK_l',
-    title: 'We are Hiring',
-    embedUrl: 'https://www.instagram.com/p/DT-R54AiK_l/embed/',
-  },
-  {
-    id: 'DQ2eCw6DZHZ',
-    title: 'Najaarsproeverij',
-    embedUrl: 'https://www.instagram.com/reel/DQ2eCw6DZHZ/embed/',
-  },
-  {
-    id: 'DQgd0oyDabG',
-    title: 'Geschenken',
-    embedUrl: 'https://www.instagram.com/p/DQgd0oyDabG/embed/',
-  },
+const stories = [
+  { image: storyImg1, label: 'Wijn' },
+  { image: storyImg2, label: 'Wijngaard' },
+  { image: storyImg3, label: 'Champagne' },
+  { image: storyImg4, label: 'Kelder' },
 ];
 
-const storyHighlights = [
-  { label: 'Proeverijen', emoji: '🍷' },
-  { label: 'Nieuw binnen', emoji: '✨' },
-  { label: 'Acties', emoji: '🏷️' },
-  { label: 'Behind the scenes', emoji: '🎬' },
+const posts = [
+  {
+    image: postHiring,
+    title: 'We are Hiring',
+    url: 'https://www.instagram.com/p/DT-R54AiK_l/',
+  },
+  {
+    image: postProeverij,
+    title: 'Najaarsproeverij',
+    url: 'https://www.instagram.com/reel/DQ2eCw6DZHZ/',
+  },
+  {
+    image: postGeschenken,
+    title: 'Geschenken',
+    url: 'https://www.instagram.com/p/DQgd0oyDabG/',
+  },
 ];
 
 const Instagram = () => {
@@ -46,70 +53,63 @@ const Instagram = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* Desktop: 2 columns / Mobile: stacked */}
-          <div className="grid lg:grid-cols-[280px_1fr] gap-8 lg:gap-12">
-            
+          {/* Desktop: 4 columns (1 stories + 3 posts) / Mobile: stacked */}
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
             {/* Stories column */}
-            <div className="order-1">
+            <div>
               <p className="text-anthracite font-sans text-xs tracking-[0.15em] uppercase mb-5 font-medium">
-                Stories & Highlights
+                Stories
               </p>
-              <div className="flex lg:flex-col gap-4 overflow-x-auto lg:overflow-x-visible pb-2 lg:pb-0">
-                {storyHighlights.map((story) => (
+              <div className="flex lg:flex-col gap-5 justify-center lg:justify-start">
+                {stories.map((story) => (
                   <a
                     key={story.label}
                     href={INSTAGRAM_URL}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-shrink-0 flex flex-col items-center gap-2 group"
+                    className="flex flex-col items-center gap-2 group"
                   >
-                    <div className="w-16 h-16 lg:w-18 lg:h-18 border-2 border-bordeaux/30 flex items-center justify-center bg-beige group-hover:border-bordeaux transition-colors duration-300">
-                      <span className="text-2xl">{story.emoji}</span>
+                    <div className="w-16 h-16 md:w-[72px] md:h-[72px] rounded-full overflow-hidden border-2 border-bordeaux/30 group-hover:border-bordeaux transition-colors duration-300 p-[2px]">
+                      <img
+                        src={story.image}
+                        alt={story.label}
+                        className="w-full h-full object-cover rounded-full"
+                        loading="lazy"
+                      />
                     </div>
-                    <span className="text-anthracite/70 font-sans text-xs text-center group-hover:text-bordeaux transition-colors">
+                    <span className="text-anthracite/60 font-sans text-[11px] group-hover:text-bordeaux transition-colors">
                       {story.label}
                     </span>
                   </a>
                 ))}
-                <a
-                  href={INSTAGRAM_URL}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-shrink-0 flex flex-col items-center gap-2 group"
-                >
-                  <div className="w-16 h-16 lg:w-18 lg:h-18 border-2 border-dashed border-anthracite/20 flex items-center justify-center bg-beige/50 group-hover:border-bordeaux/50 transition-colors duration-300">
-                    <ExternalLink size={18} className="text-anthracite/40 group-hover:text-bordeaux transition-colors" />
-                  </div>
-                  <span className="text-anthracite/50 font-sans text-xs text-center group-hover:text-bordeaux transition-colors">
-                    Bekijk alles
-                  </span>
-                </a>
               </div>
             </div>
 
-            {/* Posts grid */}
-            <div className="order-2">
-              <p className="text-anthracite font-sans text-xs tracking-[0.15em] uppercase mb-5 font-medium">
-                Uitgelichte posts
-              </p>
-              <div className="grid sm:grid-cols-3 gap-4">
-                {posts.map((post) => (
-                  <div key={post.id} className="w-full">
-                    <div className="relative w-full bg-beige" style={{ minHeight: '400px' }}>
-                      <iframe
-                        src={post.embedUrl}
-                        className="w-full border-0"
-                        style={{ minHeight: '400px', height: '100%' }}
-                        loading="lazy"
-                        title={post.title}
-                        allowTransparency
-                        allow="encrypted-media"
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+            {/* 3 Posts */}
+            {posts.map((post) => (
+              <a
+                key={post.url}
+                href={post.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block"
+              >
+                <p className="text-anthracite font-sans text-xs tracking-[0.15em] uppercase mb-5 font-medium lg:block hidden">
+                  {post.title}
+                </p>
+                <p className="text-anthracite font-sans text-xs tracking-[0.15em] uppercase mb-3 font-medium lg:hidden">
+                  {post.title}
+                </p>
+                <div className="aspect-square overflow-hidden bg-beige">
+                  <img
+                    src={post.image}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
+                  />
+                </div>
+              </a>
+            ))}
           </div>
 
           {/* CTA */}
@@ -118,7 +118,7 @@ const Instagram = () => {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-bordeaux text-primary-foreground font-sans text-sm tracking-wider uppercase px-8 py-4 hover:bg-bordeaux-dark transition-all duration-300 group"
+              className="inline-flex items-center gap-3 bg-bordeaux text-primary-foreground font-sans text-sm tracking-wider uppercase px-8 py-4 hover:bg-bordeaux-dark transition-all duration-300"
             >
               <InstagramIcon size={18} strokeWidth={1.5} />
               <span>Volg ons op Instagram</span>
