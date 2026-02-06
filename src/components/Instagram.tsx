@@ -59,13 +59,17 @@ const Instagram = () => {
           {/* Profile section */}
           <div className="flex items-center gap-6 px-6 md:px-8 py-6 md:py-8">
             <div
-              className="w-20 h-20 md:w-24 md:h-24 shrink-0 p-[3px] overflow-hidden"
+              className="w-20 h-20 md:w-24 md:h-24 shrink-0"
               style={{
                 borderRadius: '50%',
                 background: 'linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)',
+                padding: '3px',
               }}
             >
-              <div className="w-full h-full overflow-hidden bg-offwhite" style={{ borderRadius: '50%', padding: '3px' }}>
+              <div
+                className="w-full h-full bg-offwhite"
+                style={{ borderRadius: '50%', padding: '3px' }}
+              >
                 <img
                   src={logoImage}
                   alt="Wijnhandel van Zoolingen"
@@ -86,10 +90,10 @@ const Instagram = () => {
               </p>
               <div className="flex items-center gap-6 mt-3">
                 <span className="text-anthracite text-sm font-sans">
-                  <strong className="font-semibold">61</strong> berichten
+                  <strong className="font-semibold">523</strong> berichten
                 </span>
                 <span className="text-anthracite text-sm font-sans">
-                  <strong className="font-semibold">706</strong> volgers
+                  <strong className="font-semibold">1.274</strong> volgers
                 </span>
               </div>
             </div>
