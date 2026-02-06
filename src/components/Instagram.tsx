@@ -1,7 +1,7 @@
 import { Instagram as InstagramIcon, ExternalLink } from 'lucide-react';
 import instagramPost1 from '@/assets/instagram-post-1.jpeg';
 import instagramPost2 from '@/assets/instagram-post-2.jpeg';
-import logoImage from '@/assets/logo.png';
+import instagramProfile from '@/assets/instagram-profile.png';
 
 const instagramPosts = [
   {
@@ -71,7 +71,7 @@ const Instagram = () => {
                 style={{ borderRadius: '50%', padding: '3px' }}
               >
                 <img
-                  src={logoImage}
+                  src={instagramProfile}
                   alt="Wijnhandel van Zoolingen"
                   className="w-full h-full object-cover"
                   style={{ borderRadius: '50%' }}
