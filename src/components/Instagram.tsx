@@ -22,7 +22,7 @@ const Instagram = () => {
             Een kijkje achter de kurk
           </h2>
           <p className="text-anthracite/70 font-sans text-sm md:text-base max-w-xl mx-auto leading-relaxed">
-            Proeverijen, nieuwe wijnen, tips en een blik achter de schermen. Volg ons en ontdek wat er speelt bij Van Zoolingen.
+            Proeverijen, nieuwe wijnen, tips en een blik achter de schermen. Volg ons op Instagram en ontdek wat er speelt bij Van Zoolingen.
           </p>
         </div>
 
