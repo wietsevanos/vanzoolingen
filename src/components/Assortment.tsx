@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import wineImage from '@/assets/assortment-wine.png';
 import champagneImage from '@/assets/assortment-champagne.png';
 import spiritsImage from '@/assets/assortment-spirits.png';
@@ -7,6 +8,7 @@ import accessoriesImage from '@/assets/assortment-accessories.png';
 const assortmentItems = [
   {
     title: 'Wijnen',
+    slug: 'wijnen',
     subtitle: 'Rood, Wit & Rosé',
     description: 'Een zorgvuldig samengestelde collectie van wereldwijnen. Van elegante Bourgognes tot krachtige Barolos, van frisse Sauvignon Blancs tot volle Chardonnays.',
     brands: 'Coppola, Bernardus, Louis Jadot, Gaja, Antinori, Boschendal, J.Lohr, Waterkloof, Whispering Angel, Jordan, Meerlust, Rothschild',
@@ -15,6 +17,7 @@ const assortmentItems = [
   },
   {
     title: 'Champagne',
+    slug: 'champagne',
     subtitle: 'Feest & Elegantie',
     description: 'De finest champagnes voor bijzondere momenten. Van gerenommeerde huizen tot exclusieve cuvées, elk met een eigen karakter en verfijning.',
     brands: 'Moët & Chandon, Veuve Clicquot, Ruinart, Laurent Perrier, Krug, Dom Pérignon',
@@ -23,6 +26,7 @@ const assortmentItems = [
   },
   {
     title: 'Gedistilleerd',
+    slug: 'gedistilleerd',
     subtitle: 'Whisky, Cognac & Meer',
     description: 'Een uitgelezen selectie spirits voor de kenner. Van rijke single malts tot verfijnde cognacs, met zorg geselecteerd voor optimaal genieten.',
     brands: 'Breed assortiment whisky, cognac, rum, gin en likeuren van gerenommeerde distilleerderijen',
@@ -31,6 +35,7 @@ const assortmentItems = [
   },
   {
     title: 'Accessoires',
+    slug: 'accessoires',
     subtitle: 'Glaswerk & Gereedschap',
     description: 'Alles voor de perfecte wijnbeleving. Van hoogwaardige glazen tot professionele kurkentrekkers en elegante karaffen.',
     brands: 'Glazen, karaffen, kurkentrekkers, wijnkoelers en geschenksets',
@@ -39,7 +44,7 @@ const assortmentItems = [
   },
 ];
 
-const TextBlock = ({ item }: { item: typeof assortmentItems[0] }) => (
+const TextBlock = ({ item }: { item: (typeof assortmentItems)[0] }) => (
   <div className="bg-beige-warm h-full flex flex-col justify-center p-8 lg:p-12 xl:p-16">
     <p className="text-olive text-xs font-sans tracking-[0.2em] uppercase mb-3">
       {item.subtitle}
@@ -53,13 +58,13 @@ const TextBlock = ({ item }: { item: typeof assortmentItems[0] }) => (
     <p className="text-anthracite-light/70 font-sans text-xs leading-relaxed mb-6 italic">
       {item.brands}
     </p>
-    <a 
-      href="#contact" 
+    <Link 
+      to={`/categorie/${item.slug}`}
       className="inline-flex items-center gap-2 text-bordeaux font-sans text-sm hover:gap-3 transition-all duration-300 group"
     >
       <span>Ontdek meer</span>
       <ArrowRight size={14} strokeWidth={2} className="group-hover:translate-x-1 transition-transform" />
-    </a>
+    </Link>
   </div>
 );
 
