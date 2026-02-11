@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '@/assets/wine-glass-logo.png';
 const navLinks = [{
@@ -23,12 +24,12 @@ const Header = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <img src={logo} alt="Van Zoolingen logo" className="h-12 w-auto object-contain" />
             <span className="font-serif text-xl md:text-2xl font-semibold text-anthracite tracking-wide">
               Van Zoolingen
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-10">
