@@ -33,15 +33,15 @@ const CategoryPage = () => {
 
       <main>
         {/* Hero */}
-        <section className="relative h-[60vh] min-h-[400px] mt-20">
+        <section className="relative mt-20">
           <img
             src={category.heroImage}
             alt={category.title}
-            className="w-full h-full object-cover"
+            className="w-full h-auto object-contain"
           />
           <div className="absolute inset-0 bg-anthracite/60" />
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-offwhite font-medium mb-4 drop-shadow-lg">
+            <h1 className="font-serif text-3xl md:text-5xl lg:text-6xl text-offwhite font-medium mb-4 drop-shadow-lg">
               {category.heroTitle}
             </h1>
           </div>
