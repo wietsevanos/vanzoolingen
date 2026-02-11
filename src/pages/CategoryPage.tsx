@@ -21,22 +21,19 @@ const CategoryPage = () => {
     <div className="min-h-screen bg-offwhite">
       <Header />
 
-      {/* Sticky back bar */}
-      <div className="fixed top-20 left-0 right-0 z-40 bg-offwhite/95 backdrop-blur-sm border-b border-border">
-        <div className="container mx-auto px-6 lg:px-12 py-3">
-          <Link
-            to="/#assortiment"
-            className="inline-flex items-center gap-2 text-bordeaux hover:text-bordeaux-dark transition-colors text-sm font-sans font-medium tracking-wide"
-          >
-            <ArrowLeft size={16} strokeWidth={2} />
-            <span>Terug naar assortiment</span>
-          </Link>
-        </div>
-      </div>
+      {/* Floating back button */}
+      <Link
+        to="/#assortiment"
+        className="fixed bottom-8 right-8 z-40 flex items-center gap-2 px-5 py-3 bg-bordeaux text-primary-foreground font-sans text-sm font-medium tracking-wide shadow-lg hover:bg-bordeaux-dark hover:shadow-xl transition-all duration-300 group"
+        aria-label="Terug naar assortiment"
+      >
+        <ArrowLeft size={16} strokeWidth={2} className="group-hover:-translate-x-1 transition-transform" />
+        <span>Terug</span>
+      </Link>
 
       <main>
         {/* Hero */}
-        <section className="relative h-[60vh] min-h-[400px] mt-[calc(5rem+3rem)]">
+        <section className="relative h-[60vh] min-h-[400px] mt-20">
           <img
             src={category.heroImage}
             alt={category.title}
