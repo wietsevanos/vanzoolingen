@@ -1,4 +1,5 @@
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
 import { ArrowLeft, MapPin } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,16 +8,35 @@ import NotFound from './NotFound';
 
 const CategoryPage = () => {
   const { slug } = useParams<{ slug: string }>();
+  const { pathname } = useLocation();
   const category = getCategoryBySlug(slug || '');
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   if (!category) return <NotFound />;
 
   return (
     <div className="min-h-screen bg-offwhite">
       <Header />
+
+      {/* Sticky back bar */}
+      <div className="fixed top-20 left-0 right-0 z-40 bg-offwhite/95 backdrop-blur-sm border-b border-border">
+        <div className="container mx-auto px-6 lg:px-12 py-3">
+          <Link
+            to="/#assortiment"
+            className="inline-flex items-center gap-2 text-bordeaux hover:text-bordeaux-dark transition-colors text-sm font-sans font-medium tracking-wide"
+          >
+            <ArrowLeft size={16} strokeWidth={2} />
+            <span>Terug naar assortiment</span>
+          </Link>
+        </div>
+      </div>
+
       <main>
         {/* Hero */}
-        <section className="relative h-[60vh] min-h-[400px] mt-20">
+        <section className="relative h-[60vh] min-h-[400px] mt-[calc(5rem+3rem)]">
           <img
             src={category.heroImage}
             alt={category.title}
@@ -29,17 +49,6 @@ const CategoryPage = () => {
             </h1>
           </div>
         </section>
-
-        {/* Back link */}
-        <div className="container mx-auto px-6 lg:px-12 pt-8">
-          <Link
-            to="/#assortiment"
-            className="inline-flex items-center gap-2 text-anthracite-light hover:text-bordeaux transition-colors text-sm font-sans tracking-wide"
-          >
-            <ArrowLeft size={16} />
-            <span>Terug naar assortiment</span>
-          </Link>
-        </div>
 
         {/* Intro */}
         <section className="container mx-auto px-6 lg:px-12 py-16 lg:py-20">
