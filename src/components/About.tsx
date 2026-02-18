@@ -12,7 +12,7 @@ const About = () => {
             </p>
             
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-anthracite font-medium mb-8 leading-tight">
-              Over Van Zoolingen
+              Welkom bij Van Zoolingen
             </h2>
             
             <div className="space-y-6 text-anthracite-light font-sans leading-relaxed">
@@ -20,10 +20,10 @@ const About = () => {
                 Van Zoolingen is een toegankelijke wijnhandel met een klassieke basis, waar traditie en vernieuwing samenkomen. In een warme en gastvrije omgeving staan smaak, kwaliteit en beleving centraal. Wij willen een plek zijn waar zowel de beginnende liefhebber als de echte kenner zich thuis voelt.
               </p>
               <p>
-                Van karaktervolle klassiekers tot verrassende ontdekkingen: elke fles in ons assortiment is met zorg geselecteerd op kwaliteit en smaak. Daarnaast bieden wij een uitgebreide collectie champagne, likeuren, cognac, jenever, gin en whisky. Ook voor stijlvolle kerstpakketten en relatiegeschenken – particulier of zakelijk – bent u bij ons aan het juiste adres.
+                Van karaktervolle klassiekers tot verrassende ontdekkingen: elke fles in ons assortiment is met zorg geselecteerd op kwaliteit en smaak. Daarnaast bieden wij een uitgebreide collectie champagne, likeuren, cognac, jenever, gin en whisky. Ook voor stijlvolle kerstpakketten en relatiegeschenken, particulier of zakelijk, bent u bij ons aan het juiste adres.
               </p>
               <p>
-                Met persoonlijke aandacht, deskundig advies en bezorging in de regio streven wij ernaar u altijd de beste service te bieden. Of u nu op zoek bent naar een bijzondere fles voor een diner, een passend cadeau of een mooie aanvulling op uw eigen collectie – wij denken graag met u mee.
+                Met persoonlijke aandacht, deskundig advies en bezorging in de regio streven wij ernaar u altijd de beste service te bieden. Of u nu op zoek bent naar een bijzondere fles voor een diner, een passend cadeau of een mooie aanvulling op uw eigen collectie, wij denken graag met u mee.
               </p>
               <p>
                 Wij hopen u binnenkort te mogen verwelkomen in onze winkel en u kennis te laten maken met ons assortiment.
