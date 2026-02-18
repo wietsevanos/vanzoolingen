@@ -26,7 +26,7 @@ export const categories: CategoryData[] = [
     heroImage: wineImage,
     intro: "Onze wijncollectie is een zorgvuldig samengestelde selectie uit de mooiste wijnstreken ter wereld. Van elegante Bourgognes en krachtige Barolo's tot frisse Sauvignon Blancs en volle Chardonnays: iedere fles in ons assortiment hebben wij gekozen omdat wij er zelf enthousiast van worden.\n\nBij het selecteren van onze wijnen staan kwaliteit en authenticiteit altijd centraal. We kijken niet alleen naar gerenommeerde namen, maar juist ook naar kleinere, gepassioneerde producenten die met toewijding en vakmanschap werken. Zo bieden wij een collectie waarin vertrouwde klassiekers en verrassende nieuwe ontdekkingen elkaar moeiteloos aanvullen.\n\nHet resultaat is een veelzijdig aanbod voor iedere wijnliefhebber: wijnen met karakter, een eigen verhaal en vooral veel smaakbeleving.",
     brandsSupertitle: 'Uit ons assortiment',
-    brandsTitle: 'Wijnhuizen die wij voeren',
+    brandsTitle: 'Wijnhuizen die wij aanbieden',
     brands: [
       { name: 'Francis Ford Coppola' },
       { name: 'Bernardus' },
