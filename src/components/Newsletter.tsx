@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 const Newsletter = () => {
   useEffect(() => {
     // Re-initialize Enormail form when component mounts
-    const script = document.querySelector('script[src*="enormail"]');
+    const script = document.querySelector('script[src*="885a79e0e2f21736d148ee23222f308d"]');
     if (script) {
       // Trigger re-render of Enormail form
       const event = new Event('DOMContentLoaded');
@@ -25,7 +25,7 @@ const Newsletter = () => {
 
           {/* Enormail Embedded Form */}
           <div className="newsletter-form-wrapper flex justify-center items-center [&>*]:mx-auto">
-            <div data-enormail-webform="db516cb837a9bb07886a083b85bd25f8"></div>
+            <div data-enormail-webform="885a79e0e2f21736d148ee23222f308d"></div>
           </div>
 
           <p className="text-beige/60 text-xs font-sans mt-8">
