@@ -17,16 +17,16 @@ const About = () => {
             
             <div className="space-y-6 text-anthracite-light font-sans leading-relaxed">
               <p>
-                Welkom bij Van Zoolingen, een toegankelijke, moderne, maar toch klassieke wijnhandel.
+                Van Zoolingen is een toegankelijke wijnhandel met een klassieke basis, waar traditie en vernieuwing samenkomen. In een warme en gastvrije omgeving staan smaak, kwaliteit en beleving centraal. Wij willen een plek zijn waar zowel de beginnende liefhebber als de echte kenner zich thuis voelt.
               </p>
               <p>
-                Wij specialiseren ons in wijnen uit de oude en nieuwe wereld. Ons assortiment bestaat uit wijn, champagne, likeuren, cognac, whisky, bier, kerst- en relatiegeschenken.
+                Van karaktervolle klassiekers tot verrassende ontdekkingen: elke fles in ons assortiment is met zorg geselecteerd op kwaliteit en smaak. Daarnaast bieden wij een uitgebreide collectie champagne, likeuren, cognac, jenever, gin en whisky. Ook voor stijlvolle kerstpakketten en relatiegeschenken – particulier of zakelijk – bent u bij ons aan het juiste adres.
               </p>
               <p>
-                Met persoonlijke aandacht, deskundig advies en bezorging in de regio streven wij naar uitstekende service.
+                Met persoonlijke aandacht, deskundig advies en bezorging in de regio streven wij ernaar u altijd de beste service te bieden. Of u nu op zoek bent naar een bijzondere fles voor een diner, een passend cadeau of een mooie aanvulling op uw eigen collectie – wij denken graag met u mee.
               </p>
               <p>
-                Wij hopen u te mogen ontvangen in de winkel.
+                Wij hopen u binnenkort te mogen verwelkomen in onze winkel en u kennis te laten maken met ons assortiment.
               </p>
               <p className="font-serif text-lg text-anthracite italic pt-4">
                 Team Van Zoolingen
