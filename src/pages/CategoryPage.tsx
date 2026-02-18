@@ -49,7 +49,7 @@ const CategoryPage = () => {
 
         {/* Intro */}
         <section className="container mx-auto px-6 lg:px-12 py-16 lg:py-20">
-          <div className="max-w-3xl mx-auto text-center">
+          <div className="max-w-3xl mx-auto text-left">
             <p className="text-olive text-xs font-sans tracking-[0.2em] uppercase mb-4">
               Onze Collectie
             </p>
