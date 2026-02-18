@@ -69,10 +69,10 @@ const CategoryPage = () => {
           <div className="container mx-auto px-6 lg:px-12">
             <div className="text-center mb-12">
               <p className="text-olive text-xs font-sans tracking-[0.2em] uppercase mb-3">
-                Geselecteerde Merken
+                {category.brandsSupertitle}
               </p>
               <h2 className="font-serif text-2xl md:text-3xl text-anthracite font-medium">
-                Onze Partners
+                {category.brandsTitle}
               </h2>
             </div>
             <div className="max-w-4xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
