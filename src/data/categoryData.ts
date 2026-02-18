@@ -66,7 +66,7 @@ export const categories: CategoryData[] = [
     heroImage: spiritsImage,
     intro: "Wij hebben een uitgebreid en veelzijdig assortiment gedistilleerd dat aansluit bij uiteenlopende smaken en voorkeuren. Van verfijnde gin en ambachtelijke jenever tot expressieve whisky, zachte rum en vodka: ons aanbod is divers. Ook voor bijzondere likeuren en karaktervolle tequila's kunt u bij ons terecht, waardoor er voor iedere liefhebber iets passends te vinden is.\n\nOf uw voorkeur nu uitgaat naar een tijdloze klassieker met een rijke traditie of een eigentijdse variant met een moderne twist, er is altijd een passende keuze voor elk moment. Perfect voor een ontspannen avond thuis, een feestelijke gelegenheid of als stijlvol en smaakvol cadeau.",
     brandsSupertitle: 'Uit ons assortiment',
-    brandsTitle: 'Merken die wij voeren',
+    brandsTitle: 'Merken die wij aanbieden',
     brands: [
       { name: 'Macallan' },
       { name: 'Glenfiddich' },
@@ -85,7 +85,7 @@ export const categories: CategoryData[] = [
     heroImage: accessoriesImage,
     intro: "Goede accessoires versterken de smaak, presentatie en beleving van wijn. Bij ons vindt u een stijlvolle collectie wijnaccessoires die kwaliteit en gebruiksgemak combineren.\n\nOns assortiment omvat onder meer verfijnd glaswerk, elegante karaffen en praktische wijnkoelers. Elk product is ontworpen om het schenken, serveren en bewaren van wijn optimaal te ondersteunen.\n\nOf u nu uw eigen wijnmoment wilt verrijken of een passend geschenk zoekt voor een liefhebber, onze accessoires zorgen voor net dat beetje extra aandacht en uitstraling bij iedere fles.",
     brandsSupertitle: 'Uit ons assortiment',
-    brandsTitle: 'Merken die wij voeren',
+    brandsTitle: 'Merken die wij aanbieden',
     brands: [
       { name: 'Riedel' },
       { name: 'Zalto' },
