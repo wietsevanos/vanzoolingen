@@ -2,11 +2,12 @@ import { useEffect } from 'react';
 
 const Instagram = () => {
   useEffect(() => {
-    if (!document.querySelector('script[src="https://w.behold.so/widget.js"]')) {
-      const s = document.createElement('script');
-      s.type = 'module';
-      s.src = 'https://w.behold.so/widget.js';
-      document.head.append(s);
+    // Load mirror-app iframe bridge script
+    if (!document.querySelector('script[src*="mirrorapp/iframe-bridge"]')) {
+      const script = document.createElement('script');
+      script.src = 'https://cdn.jsdelivr.net/npm/@mirrorapp/iframe-bridge@latest/dist/index.umd.js';
+      script.async = true;
+      document.body.appendChild(script);
     }
   }, []);
 
@@ -26,8 +27,17 @@ const Instagram = () => {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          {/* @ts-ignore */}
-          <behold-widget feed-id="f7kNu7aDZTDotTI1HK7P"></behold-widget>
+          <iframe
+            onLoad={(e) => {
+              if (typeof (window as any).iFrameSetup === 'function') {
+                (window as any).iFrameSetup(e.currentTarget);
+              }
+            }}
+            src="https://app.mirror-app.com/feed-instagram/b5f0f049-d8e0-4d8d-bde0-e6b451421cf3/preview"
+            style={{ width: '100%', border: 'none', overflow: 'hidden' }}
+            scrolling="no"
+            title="Instagram feed Wijnhandel van Zoolingen"
+          />
         </div>
       </div>
     </section>
