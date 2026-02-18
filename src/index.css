@@ -134,3 +134,15 @@
     @apply font-serif;
   }
 }
+
+/* Enormail form centering override */
+.c-enormail-webform__panelholder {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.c-enormail-webform__panelwrapper {
+  float: none !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
