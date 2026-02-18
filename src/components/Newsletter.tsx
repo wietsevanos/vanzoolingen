@@ -13,7 +13,7 @@ const Newsletter = () => {
             Ontvang als eerste het laatste nieuws, ontdek nieuwe wijnen en profiteer van exclusieve aanbiedingen, zorgvuldig bezorgd in uw inbox.
           </p>
 
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center [&_.c-enormail-webform__panelwrapper]:mx-auto [&_.c-enormail-webform__panelholder]:flex [&_.c-enormail-webform__panelholder]:justify-center">
             <div className="c-enormail-webform c-enormail-webform--885a79e0e2f21736d148ee23222f308d w-full">
               <div className="c-enormail-webform__panelholder">
                 <div className="c-enormail-webform__panelwrapper c-enormail-webform__panelwrapper--default">
