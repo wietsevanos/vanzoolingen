@@ -31,23 +31,25 @@ const Hero = () => {
             <img 
               src={heroLogo} 
               alt="Van Zoolingen Wijnhandel-Slijterij" 
-              className="w-full max-w-4xl lg:max-w-5xl mx-auto h-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] invert"
+              className="w-full max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-5xl mx-auto h-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] invert"
             />
           </div>
           
-          <p className="font-serif text-xl md:text-2xl text-olive-light font-semibold mb-12 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+          <p className="font-serif text-sm md:text-xl text-olive-light font-semibold mb-10 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
             Met passie geproefd, met zorg geselecteerd
           </p>
           
-          <LiquidButton
-            asChild
-            size="xxl"
-            className="px-10 py-4 text-offwhite text-base font-medium tracking-wide uppercase rounded-none z-10"
-          >
-            <a href="#nieuwsbrief" style={{ color: 'hsl(40, 20%, 98%)' }}>
-              Schrijf je in voor onze nieuwsbrief
-            </a>
-          </LiquidButton>
+          <div className="flex justify-center px-4">
+            <LiquidButton
+              asChild
+              size="xxl"
+              className="px-6 py-3 text-offwhite text-xs md:text-base font-medium tracking-wide uppercase rounded-none z-10 max-w-xs md:max-w-none w-full md:w-auto"
+            >
+              <a href="#nieuwsbrief" style={{ color: 'hsl(40, 20%, 98%)' }}>
+                Schrijf je in voor onze nieuwsbrief
+              </a>
+            </LiquidButton>
+          </div>
         </div>
       </div>
 
