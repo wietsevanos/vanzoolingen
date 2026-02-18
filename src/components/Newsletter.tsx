@@ -26,7 +26,7 @@ const Newsletter = () => {
       <div className="container mx-auto px-6 lg:px-12">
         <div className="max-w-2xl mx-auto text-center">
           <p className="text-beige/80 text-sm font-sans tracking-[0.2em] uppercase mb-4">
-            Nieuwsbrief voordelen
+            onze Nieuwsbrief  
 
 
 
