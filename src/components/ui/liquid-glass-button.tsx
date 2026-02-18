@@ -73,23 +73,33 @@ function LiquidButton({
   return (
     <>
       <GlassFilter />
-      <div className="relative inline-flex" style={{ filter: "url(#glass-distortion)" }}>
-        {/* Glass background layer */}
+      <div
+        className="relative inline-flex group"
+        style={{ filter: "url(#glass-distortion)" }}
+      >
+        {/* Bordeaux gradient glass background */}
         <div
-          className="absolute inset-0"
+          className="absolute inset-0 transition-opacity duration-300"
           style={{
-            background: "rgba(255,255,255,0.15)",
-            backdropFilter: "blur(12px) saturate(180%)",
-            WebkitBackdropFilter: "blur(12px) saturate(180%)",
-            border: "1px solid rgba(255,255,255,0.3)",
-            boxShadow: "inset 0 1px 0 rgba(255,255,255,0.4), 0 4px 24px rgba(0,0,0,0.2)",
+            background: "linear-gradient(160deg, rgba(120,20,40,0.55) 0%, rgba(80,10,25,0.75) 100%)",
+            backdropFilter: "blur(14px) saturate(160%)",
+            WebkitBackdropFilter: "blur(14px) saturate(160%)",
+            border: "1px solid rgba(180,60,80,0.35)",
+            boxShadow: "inset 0 1px 0 rgba(255,180,180,0.2), 0 6px 32px rgba(80,10,25,0.35)",
           }}
         />
         {/* Shine overlay */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
-            background: "linear-gradient(135deg, rgba(255,255,255,0.35) 0%, rgba(255,255,255,0.05) 50%, rgba(255,255,255,0.0) 100%)",
+            background: "linear-gradient(135deg, rgba(255,200,200,0.22) 0%, rgba(255,100,100,0.06) 50%, rgba(255,255,255,0.0) 100%)",
+          }}
+        />
+        {/* Hover brighten */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+          style={{
+            background: "rgba(255,120,120,0.10)",
           }}
         />
         <Comp

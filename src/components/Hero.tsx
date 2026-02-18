@@ -42,9 +42,9 @@ const Hero = () => {
           <LiquidButton
             asChild
             size="xxl"
-            className="px-10 py-4 text-offwhite text-base font-medium tracking-wide uppercase rounded-none"
+            className="px-10 py-4 text-offwhite text-base font-medium tracking-wide uppercase rounded-none z-10"
           >
-            <a href="#nieuwsbrief">
+            <a href="#nieuwsbrief" style={{ color: 'hsl(40, 20%, 98%)' }}>
               Schrijf je in voor onze nieuwsbrief
             </a>
           </LiquidButton>
