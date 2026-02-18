@@ -1,19 +1,19 @@
 import { Facebook, Instagram } from 'lucide-react';
 import nix18Logo from '@/assets/nix18-logo.png';
+import footerLogo from '@/assets/footer-logo.png';
 
 const Footer = () => {
   return (
     <footer className="py-12 bg-anthracite">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          {/* Logo / Name */}
+          {/* Logo */}
           <div className="text-center md:text-left">
-            <p className="font-serif text-2xl text-offwhite font-medium tracking-wide">
-              Van Zoolingen
-            </p>
-            <p className="text-beige/60 text-sm font-sans mt-1">
-              Wijnhandel - Slijterij
-            </p>
+            <img
+              src={footerLogo}
+              alt="Van Zoolingen Wijnhandel-Slijterij"
+              className="h-16 md:h-20 w-auto invert opacity-80"
+            />
           </div>
 
           {/* Social Links - Center */}
