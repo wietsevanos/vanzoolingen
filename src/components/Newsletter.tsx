@@ -1,25 +1,4 @@
-import { useEffect } from 'react';
-
-const ENORMAIL_ID = '885a79e0e2f21736d148ee23222f308d';
-
 const Newsletter = () => {
-  useEffect(() => {
-    // Remove any existing Enormail script so it re-initializes
-    const existing = document.querySelector(`script[src*="${ENORMAIL_ID}"]`);
-    if (existing) {
-      existing.remove();
-    }
-
-    // Dynamically append the script so it runs after the div is in the DOM
-    const script = document.createElement('script');
-    script.src = `https://embed.enormail.eu/js/${ENORMAIL_ID}.js`;
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      script.remove();
-    };
-  }, []);
 
   return (
     <section id="nieuwsbrief" className="py-24 lg:py-32 bg-olive">
@@ -152,7 +131,7 @@ const Newsletter = () => {
           </p>
 
           <div className="newsletter-form-wrapper flex justify-center items-center [&>*]:mx-auto">
-            <div data-enormail-webform={ENORMAIL_ID}></div>
+            <div data-enormail-webform="885a79e0e2f21736d148ee23222f308d"></div>
           </div>
 
           <p className="text-beige/60 text-xs font-sans mt-8">
