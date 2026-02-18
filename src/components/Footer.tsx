@@ -6,13 +6,13 @@ const Footer = () => {
   return (
     <footer className="py-12 bg-anthracite">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
           {/* Logo */}
           <div className="flex justify-center md:justify-start">
             <img
               src={footerLogo}
               alt="Van Zoolingen Wijnhandel-Slijterij"
-              className="h-16 md:h-20 w-auto invert opacity-80"
+              className="h-28 md:h-20 w-auto invert opacity-80"
             />
           </div>
 
@@ -64,7 +64,7 @@ const Footer = () => {
             <img 
               src={nix18Logo} 
               alt="NIX18" 
-              className="h-8 md:h-10 w-auto mb-3"
+              className="h-8 md:h-10 w-auto mb-3 self-center md:self-end"
             />
             <div className="text-beige/50 text-xs font-sans space-y-0.5 leading-relaxed">
               <p>18+, verkoop van alcohol uitsluitend aan volwassenen</p>
