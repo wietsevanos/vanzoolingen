@@ -22,7 +22,7 @@ export const categories: CategoryData[] = [
     title: 'Wijnen',
     heroTitle: 'Wijnen van topkwaliteit',
     heroImage: wineImage,
-    intro: "Bij Van Zoolingen vindt u een zorgvuldig samengestelde collectie wijnen uit de beste wijnregio\u2019s ter wereld. Van elegante Bourgognes tot krachtige Barolos, van frisse Sauvignon Blancs tot volle Chardonnays, elke fles is met passie geproefd en met zorg geselecteerd. Onze sommeliers reizen regelmatig naar de wijngaarden om persoonlijk kennis te maken met de wijnmakers en hun filosofie. Zo garanderen wij dat elke wijn in ons assortiment een verhaal vertelt en een uitzonderlijke smaakbeleving biedt.",
+    intro: "Onze wijncollectie is een zorgvuldig samengestelde selectie uit de mooiste wijnstreken ter wereld. Van elegante Bourgognes en krachtige Barolo's tot frisse Sauvignon Blancs en volle Chardonnays: iedere fles in ons assortiment hebben wij gekozen omdat wij er zelf enthousiast van worden.\n\nBij het selecteren van onze wijnen staan kwaliteit en authenticiteit altijd centraal. We kijken niet alleen naar gerenommeerde namen, maar juist ook naar kleinere, gepassioneerde producenten die met toewijding en vakmanschap werken. Zo bieden wij een collectie waarin vertrouwde klassiekers en verrassende nieuwe ontdekkingen elkaar moeiteloos aanvullen.\n\nHet resultaat is een veelzijdig aanbod voor iedere wijnliefhebber: wijnen met karakter, een eigen verhaal en vooral veel smaakbeleving.",
     brands: [
       { name: 'Francis Ford Coppola' },
       { name: 'Bernardus' },
@@ -43,7 +43,7 @@ export const categories: CategoryData[] = [
     title: 'Champagne',
     heroTitle: 'Champagne voor elk bijzonder moment',
     heroImage: champagneImage,
-    intro: "Champagne is meer dan een drank, het is een beleving. Bij Van Zoolingen presenteren wij de finest champagnes van gerenommeerde huizen tot exclusieve cuv\u00E9es. Of het nu gaat om een intieme viering, een zakelijk evenement of een spontaan moment van geluk, wij helpen u de perfecte fles te kiezen. Onze collectie omvat zowel tijdloze klassiekers als verrassende ontdekkingen, elk met een eigen karakter en verfijning die past bij de gelegenheid.",
+    intro: "Champagne is niet zomaar een drank; het is een symbool van stijl, verfijning en bijzondere momenten. Het sprankelende karakter en de elegante finesse maken van elk glas een kleine viering op zich.\n\nOf u nu een intieme gelegenheid viert, een belangrijk zakelijk moment kracht wilt bijzetten of spontaan wilt toosten op het leven, wij adviseren u graag bij het vinden van de champagne die perfect aansluit bij uw wensen en de sfeer van het moment.\n\nOnze collectie brengt vertrouwde klassiekers en verrassende ontdekkingen samen, zorgvuldig geselecteerd op kwaliteit en karakter. Voor iedere liefhebber hebben wij een champagne die past bij de gelegenheid én bij de persoonlijke smaak.",
     brands: [
       { name: "Mo\u00EBt & Chandon" },
       { name: 'Veuve Clicquot' },
@@ -58,7 +58,7 @@ export const categories: CategoryData[] = [
     title: 'Gedistilleerd',
     heroTitle: 'Gedistilleerd voor de kenner',
     heroImage: spiritsImage,
-    intro: "Van rijke single malt whisky\u2019s tot verfijnde cognacs, van ambachtelijke gins tot complexe rums, ons assortiment gedistilleerd is samengesteld voor wie waarde hecht aan kwaliteit en karakter. Elk product is geselecteerd op vakmanschap, herkomst en smaakprofiel. Of u nu een ervaren kenner bent of op zoek naar een bijzonder cadeau, bij Van Zoolingen vindt u altijd iets uitzonderlijks. Laat u verrassen door onze persoonlijke aanbevelingen en ontdek nieuwe favorieten.",
+    intro: "Wij hebben een uitgebreid en veelzijdig assortiment gedistilleerd dat aansluit bij uiteenlopende smaken en voorkeuren. Van verfijnde gin en ambachtelijke jenever tot expressieve whisky, zachte rum en vodka: ons aanbod is divers. Ook voor bijzondere likeuren en karaktervolle tequila's kunt u bij ons terecht, waardoor er voor iedere liefhebber iets passends te vinden is.\n\nOf uw voorkeur nu uitgaat naar een tijdloze klassieker met een rijke traditie of een eigentijdse variant met een moderne twist, er is altijd een passende keuze voor elk moment. Perfect voor een ontspannen avond thuis, een feestelijke gelegenheid of als stijlvol en smaakvol cadeau.",
     brands: [
       { name: 'Macallan' },
       { name: 'Glenfiddich' },
@@ -75,7 +75,7 @@ export const categories: CategoryData[] = [
     title: 'Accessoires',
     heroTitle: 'Accessoires voor de perfecte beleving',
     heroImage: accessoriesImage,
-    intro: "De juiste accessoires maken het verschil tussen wijn drinken en wijn beleven. Bij Van Zoolingen bieden wij een selectie van hoogwaardig glaswerk, professionele kurkentrekkers, elegante karaffen en stijlvolle wijnkoelers. Elk product is gekozen op kwaliteit, functionaliteit en design. Of u nu uw eigen collectie wilt aanvullen of op zoek bent naar het perfecte cadeau voor een wijnliefhebber, bij ons vindt u accessoires die de wijnervaring naar een hoger niveau tillen.",
+    intro: "Goede accessoires versterken de smaak, presentatie en beleving van wijn. Bij ons vindt u een stijlvolle collectie wijnaccessoires die kwaliteit en gebruiksgemak combineren.\n\nOns assortiment omvat onder meer verfijnd glaswerk, elegante karaffen en praktische wijnkoelers. Elk product is ontworpen om het schenken, serveren en bewaren van wijn optimaal te ondersteunen.\n\nOf u nu uw eigen wijnmoment wilt verrijken of een passend geschenk zoekt voor een liefhebber, onze accessoires zorgen voor net dat beetje extra aandacht en uitstraling bij iedere fles.",
     brands: [
       { name: 'Riedel' },
       { name: 'Zalto' },

@@ -56,9 +56,11 @@ const CategoryPage = () => {
             <h2 className="font-serif text-3xl md:text-4xl text-anthracite font-medium mb-8">
               {category.title}
             </h2>
-            <p className="text-anthracite/80 font-sans text-base md:text-lg leading-relaxed">
-              {category.intro}
-            </p>
+            <div className="space-y-5 text-anthracite/80 font-sans text-base md:text-lg leading-relaxed text-left">
+              {category.intro.split('\n\n').map((paragraph, i) => (
+                <p key={i}>{paragraph}</p>
+              ))}
+            </div>
           </div>
         </section>
 
