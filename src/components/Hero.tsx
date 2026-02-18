@@ -1,6 +1,7 @@
 import heroBg from '@/assets/hero-bg.png';
 import heroLogo from '@/assets/hero-logo.png';
 import nix18Logo from '@/assets/nix18-logo.png';
+import { LiquidButton } from '@/components/ui/liquid-glass-button';
 
 const Hero = () => {
   return (
@@ -38,12 +39,15 @@ const Hero = () => {
             Met passie geproefd, met zorg geselecteerd
           </p>
           
-          <a
-            href="#nieuwsbrief"
-            className="inline-block px-10 py-4 bg-bordeaux text-primary-foreground text-base font-medium tracking-wide uppercase hover:bg-bordeaux-dark transition-colors"
+          <LiquidButton
+            asChild
+            size="xxl"
+            className="px-10 py-4 text-offwhite text-base font-medium tracking-wide uppercase rounded-none"
           >
-            Schrijf je in voor onze nieuwsbrief
-          </a>
+            <a href="#nieuwsbrief">
+              Schrijf je in voor onze nieuwsbrief
+            </a>
+          </LiquidButton>
         </div>
       </div>
 
