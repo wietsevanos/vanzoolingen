@@ -31,8 +31,22 @@ const Newsletter = () => {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-offwhite font-medium mb-6">
             Blijf op de hoogte
           </h2>
-          <p className="text-beige/90 font-sans text-base md:text-lg mb-12 leading-relaxed">
-            Ontvang aanbiedingen, nieuwe wijnen en exclusieve acties in je inbox.
+          <p className="text-beige/90 font-sans text-base md:text-lg mb-12 leading-relaxed">Ontvang als eerste het laatste nieuws, ontdek nieuwe wijnen en profiteer van exclusieve aanbiedingen, zorgvuldig bezorgd in uw inbox.
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
+ 
+
           </p>
 
           <div className="newsletter-form-wrapper flex justify-center items-center [&>*]:mx-auto">
@@ -44,8 +58,4 @@ const Newsletter = () => {
           </p>
         </div>
       </div>
-    </section>
-  );
-};
-
-export default Newsletter;
+    </section>);};export default Newsletter;
