@@ -24,18 +24,18 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-12 text-center">
+      <div className="relative z-10 container mx-auto px-4 lg:px-12 text-center">
         <div className="max-w-6xl mx-auto animate-fade-in">
           {/* Logo */}
-          <div className="mb-8">
+          <div className="mb-3 md:mb-8">
             <img 
               src={heroLogo} 
               alt="Van Zoolingen Wijnhandel-Slijterij" 
-              className="w-full max-w-xs sm:max-w-2xl md:max-w-4xl lg:max-w-5xl mx-auto h-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] invert"
+              className="w-full max-w-[95vw] sm:max-w-2xl md:max-w-4xl lg:max-w-5xl mx-auto h-auto drop-shadow-[0_4px_20px_rgba(0,0,0,0.5)] invert"
             />
           </div>
           
-          <p className="font-serif text-sm md:text-xl text-olive-light font-semibold mb-10 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+          <p className="font-serif text-sm md:text-xl text-olive-light font-semibold mb-4 md:mb-10 drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
             Met passie geproefd, met zorg geselecteerd
           </p>
           
