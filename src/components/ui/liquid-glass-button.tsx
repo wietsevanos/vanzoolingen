@@ -73,14 +73,12 @@ function LiquidButton({
   return (
     <>
       <GlassFilter />
-      <div
-        className="relative inline-flex group"
-        style={{ filter: "url(#glass-distortion)" }}
-      >
-        {/* Bordeaux gradient glass background */}
+      <div className="relative inline-flex group">
+        {/* Bordeaux gradient glass background — filter only on this layer */}
         <div
           className="absolute inset-0 transition-opacity duration-300"
           style={{
+            filter: "url(#glass-distortion)",
             background: "linear-gradient(160deg, rgba(120,20,40,0.55) 0%, rgba(80,10,25,0.75) 100%)",
             backdropFilter: "blur(14px) saturate(160%)",
             WebkitBackdropFilter: "blur(14px) saturate(160%)",
