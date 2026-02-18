@@ -31,7 +31,7 @@ const Newsletter = () => {
                       <div className="col-sm-12">
                         <div className="c-enormail-webform__text">
                           <div className="c-enormail-webform__thankyouheading">
-                            <p>Proost, je bent erbij!</p>
+                            <p>Proost, je bent erbij! 🥂</p>
                           </div>
                           <div className="c-enormail-webform__thankyouparagraph">
                             <p>
@@ -79,7 +79,7 @@ const Newsletter = () => {
                                   </div>
                                   <button type="submit" className="btn c-enormail-webform__button c-enormail-webform__button--left c-enormail-webform__button--shadow">
                                     <span className="c-enormail-webform__button__inner">
-                                      <span className="c-enormail-webform__button__loader" style={{ display: 'none', height: '22px', color: 'rgb(255,255,255)' }}>
+                                      <span className="c-enormail-webform__button__loader" style={{ display: 'none', height: '12px', color: 'rgb(255,255,255)' }}>
                                         <svg version="1.1" id="L4" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 100 40" enableBackground="new 0 0 0 0" xmlSpace="preserve">
                                           <circle fill="rgb(255,255,255)" stroke="none" cx="30" cy="20" r="6" />
                                           <circle fill="rgb(255,255,255)" stroke="none" cx="50" cy="20" r="6" />
