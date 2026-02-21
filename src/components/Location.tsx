@@ -11,7 +11,20 @@ const openingHours = [
 ];
 
 const Location = () => {
-  const today = new Date().getDay();
+  const now = new Date();
+  const today = now.getDay();
+
+  // Voorjaarsvakantie: dinsdag 18 feb t/m woensdag 19 feb 2026 gesloten
+  // Verloopt automatisch na zondag 22 feb 2026
+  const vacationEnd = new Date(2026, 1, 22, 23, 59, 59); // 22 feb 2026
+  const isVacationWeek = now <= vacationEnd;
+
+  const getHours = (item: typeof openingHours[number]) => {
+    if (isVacationWeek && (item.dayIndex === 2 || item.dayIndex === 3)) {
+      return 'Gesloten (voorjaarsvakantie)';
+    }
+    return item.hours;
+  };
 
   return (
     <section id="locatie" className="py-24 lg:py-32 bg-beige">
@@ -81,7 +94,7 @@ const Location = () => {
                     className={`
                       flex items-center justify-between px-6 py-4
                       ${index !== openingHours.length - 1 ? 'border-b border-beige-warm/60' : ''}
-                      ${isToday ? 'bg-olive text-offwhite' : ''}
+                      ${isToday ? 'bg-olive text-offwhite' : getHours(item).includes('vakantie') ? 'bg-rose-50' : ''}
                       transition-colors
                     `}
                   >
@@ -95,8 +108,8 @@ const Location = () => {
                         </span>
                       )}
                     </div>
-                    <span className={`font-sans ${isToday ? 'text-offwhite font-medium' : isClosed ? 'text-anthracite-light' : 'text-anthracite'}`}>
-                      {item.hours}
+                    <span className={`font-sans ${isToday ? 'text-offwhite font-medium' : (isClosed || getHours(item).includes('vakantie')) ? 'text-anthracite-light' : 'text-anthracite'}`}>
+                      {getHours(item)}
                     </span>
                   </div>
                 );
