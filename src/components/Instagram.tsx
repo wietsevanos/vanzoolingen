@@ -41,16 +41,32 @@ const Instagram = () => {
           />
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <a
-            href="https://www.instagram.com/wijnhandelvanzoolingen/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-bordeaux text-offwhite font-sans text-sm tracking-wide px-8 py-4 hover:bg-bordeaux/90 transition-colors"
-          >
-            <InstagramIcon size={18} strokeWidth={1.75} />
-            <span>Volg ons op Instagram</span>
-          </a>
+        <div className="mt-16 max-w-3xl mx-auto">
+          <div className="bg-anthracite text-offwhite p-10 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-10 text-center md:text-left">
+            <div className="shrink-0 w-16 h-16 rounded-full bg-offwhite/10 border border-offwhite/20 flex items-center justify-center">
+              <InstagramIcon size={28} strokeWidth={1.5} className="text-offwhite" />
+            </div>
+            <div className="flex-1">
+              <p className="text-badge-today text-xs font-sans tracking-[0.25em] uppercase mb-2">
+                @wijnhandelvanzoolingen
+              </p>
+              <h3 className="font-serif text-2xl md:text-3xl font-medium mb-2">
+                Volg ons op Instagram
+              </h3>
+              <p className="text-offwhite/70 font-sans text-sm leading-relaxed">
+                Mis geen nieuwe binnenkomers, proeverijen of wijntips meer.
+              </p>
+            </div>
+            <a
+              href="https://www.instagram.com/wijnhandelvanzoolingen/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="shrink-0 inline-flex items-center gap-3 bg-offwhite text-anthracite font-sans text-sm tracking-wide px-7 py-4 hover:bg-badge-today transition-colors"
+            >
+              <span>Volgen</span>
+              <InstagramIcon size={16} strokeWidth={1.75} />
+            </a>
+          </div>
         </div>
       </div>
     </section>
