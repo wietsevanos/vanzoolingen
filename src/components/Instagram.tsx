@@ -2,6 +2,7 @@ import { Instagram as InstagramIcon } from 'lucide-react';
 import post1 from '@/assets/instagram-post-1.jpg';
 import post2 from '@/assets/instagram-post-2.jpg';
 import post3 from '@/assets/instagram-post-3.jpg';
+import instagramBg from '@/assets/instagram-bg.png';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/wijnhandelvanzoolingen/';
 
@@ -14,15 +15,15 @@ const stats = [
 const posts = [
   {
     image: post1,
-    caption: 'Een glas Bordeaux op een rustige middag — niets mooiers.',
+    caption: 'UP Rosé Limited Edition 2026, slechts 2.500 flessen in heel Nederland. Op = écht op.',
   },
   {
     image: post2,
-    caption: 'Nieuw binnen: drie bijzondere flessen die je proeven moet.',
+    caption: 'Paasactie UP Rosé, bij 5 flessen krijg je de 6e cadeau t.w.v. € 19,99.',
   },
   {
     image: post3,
-    caption: 'Proost! Op mooie momenten, samen met goede wijn.',
+    caption: 'Nieuwe collega gezocht, een leuke (bij)baan in een sfeervolle winkel.',
   },
 ];
 
@@ -43,23 +44,31 @@ const Instagram = () => {
         </div>
 
         <div className="max-w-4xl mx-auto mb-8 lg:mb-10">
-          <div className="bg-anthracite text-offwhite px-6 md:px-10 py-5 md:py-6 flex flex-col md:flex-row items-center gap-6 md:gap-10">
-            <div className="flex items-center gap-4 md:pr-8 md:border-r border-offwhite/15">
-              <div className="shrink-1 w-10 h-10 rounded-full bg-offwhite/10 border border-offwhite/20 flex items-center justify-center">
+          <div
+            className="relative text-offwhite px-6 md:px-10 py-5 md:py-6 flex flex-col md:flex-row items-center gap-6 md:gap-10 overflow-hidden"
+            style={{
+              backgroundImage: `url(${instagramBg})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+            }}
+          >
+            <div className="absolute inset-0 bg-anthracite/25 pointer-events-none" />
+            <div className="relative flex items-center gap-4 md:pr-8 md:border-r border-offwhite/25">
+              <div className="shrink-0 w-10 h-10 rounded-full bg-offwhite/15 border border-offwhite/40 flex items-center justify-center backdrop-blur-sm">
                 <InstagramIcon size={18} strokeWidth={1.5} className="text-offwhite" />
               </div>
               <div className="text-center md:text-left">
-                <p className="text-badge-today text-[10px] font-sans tracking-[0.25em] uppercase mb-0.5">
+                <p className="text-offwhite/90 text-[10px] font-sans tracking-[0.25em] uppercase mb-0.5">
                   Instagram
                 </p>
                 <p className="font-serif text-base md:text-lg">@wijnhandelvanzoolingen</p>
               </div>
             </div>
-            <div className="flex-1 grid grid-cols-3 gap-3 md:gap-6 w-full">
+            <div className="relative flex-1 grid grid-cols-3 gap-3 md:gap-6 w-full">
               {stats.map((s) => (
                 <div key={s.label} className="text-center">
                   <p className="font-serif text-xl md:text-2xl font-medium">{s.value}</p>
-                  <p className="text-offwhite/60 text-[10px] font-sans tracking-[0.2em] uppercase mt-0.5">
+                  <p className="text-offwhite/80 text-[10px] font-sans tracking-[0.2em] uppercase mt-0.5">
                     {s.label}
                   </p>
                 </div>
