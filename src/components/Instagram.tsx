@@ -5,6 +5,12 @@ import post3 from '@/assets/instagram-post-3.jpg';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/wijnhandelvanzoolingen/';
 
+const stats = [
+  { value: '527', label: 'berichten' },
+  { value: '1.321', label: 'volgers' },
+  { value: '1.758', label: 'volgend' },
+];
+
 const posts = [
   {
     image: post1,
@@ -34,6 +40,32 @@ const Instagram = () => {
           <p className="text-anthracite/70 font-sans text-sm md:text-base max-w-xl mx-auto leading-relaxed">
             Proeverijen, nieuwe wijnen, tips en een blik achter de schermen. Volg ons op Instagram en ontdek wat er speelt bij Van Zoolingen.
           </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto mb-10 lg:mb-12">
+          <div className="bg-anthracite text-offwhite px-8 md:px-12 py-8 md:py-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="flex items-center gap-5 md:pr-10 md:border-r border-offwhite/15">
+              <div className="shrink-0 w-14 h-14 rounded-full bg-offwhite/10 border border-offwhite/20 flex items-center justify-center">
+                <InstagramIcon size={24} strokeWidth={1.5} className="text-offwhite" />
+              </div>
+              <div className="text-center md:text-left">
+                <p className="text-badge-today text-[11px] font-sans tracking-[0.25em] uppercase mb-1">
+                  Instagram
+                </p>
+                <p className="font-serif text-xl md:text-2xl">@wijnhandelvanzoolingen</p>
+              </div>
+            </div>
+            <div className="flex-1 grid grid-cols-3 gap-4 md:gap-8 w-full">
+              {stats.map((s) => (
+                <div key={s.label} className="text-center">
+                  <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium">{s.value}</p>
+                  <p className="text-offwhite/60 text-[11px] md:text-xs font-sans tracking-[0.2em] uppercase mt-1">
+                    {s.label}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 lg:gap-8">
@@ -74,32 +106,17 @@ const Instagram = () => {
           ))}
         </div>
 
-        <div className="mt-16 max-w-3xl mx-auto">
-          <div className="bg-anthracite text-offwhite p-10 md:p-12 flex flex-col md:flex-row items-center gap-8 md:gap-10 text-center md:text-left">
-            <div className="shrink-0 w-16 h-16 rounded-full bg-offwhite/10 border border-offwhite/20 flex items-center justify-center">
-              <InstagramIcon size={28} strokeWidth={1.5} className="text-offwhite" />
-            </div>
-            <div className="flex-1">
-              <p className="text-badge-today text-xs font-sans tracking-[0.25em] uppercase mb-2">
-                @wijnhandelvanzoolingen
-              </p>
-              <h3 className="font-serif text-2xl md:text-3xl font-medium mb-2">
-                Volg ons op Instagram
-              </h3>
-              <p className="text-offwhite/70 font-sans text-sm leading-relaxed">
-                Mis geen nieuwe binnenkomers, proeverijen of wijntips meer.
-              </p>
-            </div>
-            <a
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="shrink-0 inline-flex items-center gap-3 bg-offwhite text-anthracite font-sans text-sm tracking-wide px-7 py-4 hover:bg-badge-today transition-colors"
-            >
-              <span>Volgen</span>
-              <InstagramIcon size={16} strokeWidth={1.75} />
-            </a>
-          </div>
+        <div className="mt-12 flex justify-center">
+          <a
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-4 bg-anthracite text-offwhite font-sans text-sm tracking-[0.15em] uppercase px-10 py-5 hover:bg-bordeaux transition-colors duration-300"
+          >
+            <InstagramIcon size={18} strokeWidth={1.75} />
+            <span>Volgen op Instagram</span>
+            <span className="w-6 h-px bg-offwhite/60 group-hover:w-10 transition-all duration-300" />
+          </a>
         </div>
       </div>
     </section>
