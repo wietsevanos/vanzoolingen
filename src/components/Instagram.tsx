@@ -3,6 +3,13 @@ import post1 from '@/assets/instagram-post-1.jpg';
 import post2 from '@/assets/instagram-post-2.jpg';
 import post3 from '@/assets/instagram-post-3.jpg';
 import instagramBg from '@/assets/instagram-bg.png';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 
 const INSTAGRAM_URL = 'https://www.instagram.com/wijnhandelvanzoolingen/';
 
@@ -81,43 +88,26 @@ const Instagram = () => {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 lg:gap-8">
+        {/* Desktop grid */}
+        <div className="hidden md:grid max-w-6xl mx-auto md:grid-cols-3 gap-6 lg:gap-8">
           {posts.map((post, i) => (
-            <a
-              key={i}
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block bg-offwhite overflow-hidden rounded-[8px] shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] hover:shadow-[0_14px_36px_-12px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-500"
-            >
-              <div className="relative aspect-square overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.caption}
-                  loading="lazy"
-                  width={800}
-                  height={800}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-anthracite/0 group-hover:bg-anthracite/40 transition-colors duration-500 flex items-center justify-center">
-                  <InstagramIcon
-                    size={32}
-                    strokeWidth={1.5}
-                    className="text-offwhite opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  />
-                </div>
-              </div>
-              <div className="p-6 md:p-7">
-                <p className="text-olive text-xs font-sans tracking-[0.2em] uppercase mb-2">
-                  @wijnhandelvanzoolingen
-                </p>
-                <span className="block w-8 h-px bg-olive/30 mb-3" />
-                <p className="text-anthracite/80 font-sans text-sm leading-relaxed">
-                  {post.caption}
-                </p>
-              </div>
-            </a>
+            <PostCard key={i} post={post} />
           ))}
+        </div>
+
+        {/* Mobile carousel */}
+        <div className="md:hidden max-w-md mx-auto">
+          <Carousel opts={{ loop: true, align: 'center' }}>
+            <CarouselContent>
+              {posts.map((post, i) => (
+                <CarouselItem key={i}>
+                  <PostCard post={post} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-1 bg-offwhite/90 border-anthracite/10 text-anthracite hover:bg-offwhite rounded-full" />
+            <CarouselNext className="right-1 bg-offwhite/90 border-anthracite/10 text-anthracite hover:bg-offwhite rounded-full" />
+          </Carousel>
         </div>
 
         <div className="mt-12 flex justify-center">
@@ -136,5 +126,43 @@ const Instagram = () => {
     </section>
   );
 };
+
+type Post = { image: string; caption: string };
+
+const PostCard = ({ post }: { post: Post }) => (
+  <a
+    href={INSTAGRAM_URL}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group block bg-offwhite overflow-hidden rounded-[8px] shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] hover:shadow-[0_14px_36px_-12px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-500"
+  >
+    <div className="relative aspect-square overflow-hidden">
+      <img
+        src={post.image}
+        alt={post.caption}
+        loading="lazy"
+        width={800}
+        height={800}
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+      />
+      <div className="absolute inset-0 bg-anthracite/0 group-hover:bg-anthracite/40 transition-colors duration-500 flex items-center justify-center">
+        <InstagramIcon
+          size={32}
+          strokeWidth={1.5}
+          className="text-offwhite opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+        />
+      </div>
+    </div>
+    <div className="p-6 md:p-7">
+      <p className="text-olive text-xs font-sans tracking-[0.2em] uppercase mb-2">
+        @wijnhandelvanzoolingen
+      </p>
+      <span className="block w-8 h-px bg-olive/30 mb-3" />
+      <p className="text-anthracite/80 font-sans text-sm leading-relaxed">
+        {post.caption}
+      </p>
+    </div>
+  </a>
+);
 
 export default Instagram;
