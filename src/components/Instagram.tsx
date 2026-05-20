@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Instagram as InstagramIcon } from 'lucide-react';
 
 const Instagram = () => {
   useEffect(() => {
@@ -38,6 +39,18 @@ const Instagram = () => {
             scrolling="no"
             title="Instagram feed Wijnhandel van Zoolingen"
           />
+        </div>
+
+        <div className="mt-12 flex justify-center">
+          <a
+            href="https://www.instagram.com/wijnhandelvanzoolingen/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-bordeaux text-offwhite font-sans text-sm tracking-wide px-8 py-4 hover:bg-bordeaux/90 transition-colors"
+          >
+            <InstagramIcon size={18} strokeWidth={1.75} />
+            <span>Volg ons op Instagram</span>
+          </a>
         </div>
       </div>
     </section>
