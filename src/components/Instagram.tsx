@@ -38,21 +38,22 @@ const Instagram = () => {
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-anthracite font-medium mb-4">
             Een kijkje achter de kurk
           </h2>
+          <div className="w-12 h-px bg-olive/40 mx-auto mb-6" />
           <p className="text-anthracite/70 font-sans text-sm md:text-base max-w-xl mx-auto leading-relaxed">
             Proeverijen, nieuwe wijnen, tips en een blik achter de schermen. Volg ons op Instagram en ontdek wat er speelt bij Van Zoolingen.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto mb-8 lg:mb-10">
+        <div className="max-w-4xl mx-auto mb-10 lg:mb-12">
           <div
-            className="relative text-offwhite px-6 md:px-10 py-5 md:py-6 flex flex-col md:flex-row items-center gap-6 md:gap-10 overflow-hidden"
+            className="relative text-offwhite px-6 md:px-10 py-6 md:py-7 flex flex-col md:flex-row items-center gap-6 md:gap-10 overflow-hidden rounded-[8px] shadow-[0_8px_30px_-12px_rgba(0,0,0,0.35)]"
             style={{
               backgroundImage: `url(${instagramBg})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
             }}
           >
-            <div className="absolute inset-0 bg-anthracite/25 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-anthracite/40 via-anthracite/20 to-anthracite/30 pointer-events-none" />
             <div className="relative flex items-center gap-4 md:pr-8 md:border-r border-offwhite/25">
               <div className="shrink-0 w-10 h-10 rounded-full bg-offwhite/15 border border-offwhite/40 flex items-center justify-center backdrop-blur-sm">
                 <InstagramIcon size={18} strokeWidth={1.5} className="text-offwhite" />
@@ -65,10 +66,13 @@ const Instagram = () => {
               </div>
             </div>
             <div className="relative flex-1 grid grid-cols-3 gap-3 md:gap-6 w-full">
-              {stats.map((s) => (
-                <div key={s.label} className="text-center">
-                  <p className="font-serif text-xl md:text-2xl font-medium">{s.value}</p>
-                  <p className="text-offwhite/80 text-[10px] font-sans tracking-[0.2em] uppercase mt-0.5">
+              {stats.map((s, idx) => (
+                <div
+                  key={s.label}
+                  className={`text-center ${idx > 0 ? 'border-l border-offwhite/15' : ''}`}
+                >
+                  <p className="font-serif text-2xl md:text-[1.6rem] font-medium leading-tight">{s.value}</p>
+                  <p className="text-offwhite/85 text-[10px] font-sans tracking-[0.2em] uppercase mt-1">
                     {s.label}
                   </p>
                 </div>
@@ -84,7 +88,7 @@ const Instagram = () => {
               href={INSTAGRAM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="group block bg-offwhite shadow-lg overflow-hidden"
+              className="group block bg-offwhite overflow-hidden rounded-[8px] shadow-[0_6px_24px_-12px_rgba(0,0,0,0.25)] hover:shadow-[0_14px_36px_-12px_rgba(0,0,0,0.3)] hover:-translate-y-1 transition-all duration-500"
             >
               <div className="relative aspect-square overflow-hidden">
                 <img
@@ -103,10 +107,11 @@ const Instagram = () => {
                   />
                 </div>
               </div>
-              <div className="p-6">
+              <div className="p-6 md:p-7">
                 <p className="text-olive text-xs font-sans tracking-[0.2em] uppercase mb-2">
                   @wijnhandelvanzoolingen
                 </p>
+                <span className="block w-8 h-px bg-olive/30 mb-3" />
                 <p className="text-anthracite/80 font-sans text-sm leading-relaxed">
                   {post.caption}
                 </p>
@@ -115,12 +120,12 @@ const Instagram = () => {
           ))}
         </div>
 
-        <div className="mt-10 flex justify-center">
+        <div className="mt-12 flex justify-center">
           <a
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-3 bg-anthracite text-offwhite font-sans text-xs tracking-[0.15em] uppercase px-7 py-3.5 hover:bg-bordeaux transition-colors duration-300"
+            className="group inline-flex items-center gap-3 bg-anthracite text-offwhite font-sans text-xs tracking-[0.15em] uppercase px-8 py-3.5 rounded-[6px] shadow-[0_6px_20px_-10px_rgba(0,0,0,0.4)] hover:bg-bordeaux hover:shadow-[0_10px_24px_-10px_rgba(0,0,0,0.45)] transition-all duration-300"
           >
             <InstagramIcon size={14} strokeWidth={1.75} />
             <span>Volgen op Instagram</span>
