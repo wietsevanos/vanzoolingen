@@ -1,4 +1,11 @@
 import { Instagram as InstagramIcon } from 'lucide-react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel';
 import post1 from '@/assets/instagram-post-1.jpg';
 import post2 from '@/assets/instagram-post-2.jpg';
 import post3 from '@/assets/instagram-post-3.jpg';
@@ -23,6 +30,18 @@ const posts = [
   {
     image: post3,
     caption: 'Proost! Op mooie momenten, samen met goede wijn.',
+  },
+  {
+    image: post1,
+    caption: 'Proeverij van de week, ontdek nieuwe favorieten.',
+  },
+  {
+    image: post2,
+    caption: 'Achter de schermen bij Van Zoolingen.',
+  },
+  {
+    image: post3,
+    caption: 'Wijn-spijs combinaties die je verrassen.',
   },
 ];
 
@@ -68,42 +87,55 @@ const Instagram = () => {
           </div>
         </div>
 
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 lg:gap-8">
-          {posts.map((post, i) => (
-            <a
-              key={i}
-              href={INSTAGRAM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block bg-offwhite shadow-lg overflow-hidden"
-            >
-              <div className="relative aspect-square overflow-hidden">
-                <img
-                  src={post.image}
-                  alt={post.caption}
-                  loading="lazy"
-                  width={800}
-                  height={800}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-anthracite/0 group-hover:bg-anthracite/40 transition-colors duration-500 flex items-center justify-center">
-                  <InstagramIcon
-                    size={32}
-                    strokeWidth={1.5}
-                    className="text-offwhite opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                  />
-                </div>
-              </div>
-              <div className="p-6">
-                <p className="text-olive text-xs font-sans tracking-[0.2em] uppercase mb-2">
-                  @wijnhandelvanzoolingen
-                </p>
-                <p className="text-anthracite/80 font-sans text-sm leading-relaxed">
-                  {post.caption}
-                </p>
-              </div>
-            </a>
-          ))}
+        <div className="max-w-6xl mx-auto px-12 lg:px-16">
+          <Carousel opts={{ align: 'start', loop: true }} className="w-full">
+            <CarouselContent className="-ml-4 lg:-ml-6">
+              {posts.map((post, i) => (
+                <CarouselItem
+                  key={i}
+                  className="pl-4 lg:pl-6 basis-4/5 sm:basis-1/2 lg:basis-1/3"
+                >
+                  <a
+                    href={INSTAGRAM_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block bg-offwhite shadow-lg overflow-hidden h-full"
+                  >
+                    <div className="relative aspect-[4/5] overflow-hidden">
+                      <img
+                        src={post.image}
+                        alt={post.caption}
+                        loading="lazy"
+                        width={800}
+                        height={1000}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-anthracite/0 group-hover:bg-anthracite/40 transition-colors duration-500 flex items-center justify-center">
+                        <InstagramIcon
+                          size={32}
+                          strokeWidth={1.5}
+                          className="text-offwhite opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+                        />
+                      </div>
+                      <div className="absolute left-4 bottom-4 right-4 flex items-center gap-3">
+                        <div className="w-9 h-9 rounded-full bg-offwhite/95 flex items-center justify-center shrink-0">
+                          <InstagramIcon size={16} strokeWidth={1.75} className="text-anthracite" />
+                        </div>
+                        <div className="text-offwhite drop-shadow-md">
+                          <p className="font-serif text-sm leading-tight">Van Zoolingen</p>
+                          <p className="text-[10px] font-sans tracking-[0.15em] uppercase opacity-90">
+                            @wijnhandelvanzoolingen
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious className="left-0 lg:-left-4 h-11 w-11 bg-anthracite text-offwhite border-anthracite hover:bg-bordeaux hover:text-offwhite" />
+            <CarouselNext className="right-0 lg:-right-4 h-11 w-11 bg-anthracite text-offwhite border-anthracite hover:bg-bordeaux hover:text-offwhite" />
+          </Carousel>
         </div>
 
         <div className="mt-10 flex justify-center">
