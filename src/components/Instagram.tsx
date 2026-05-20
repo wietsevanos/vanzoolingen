@@ -42,24 +42,24 @@ const Instagram = () => {
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto mb-10 lg:mb-12">
-          <div className="bg-anthracite text-offwhite px-8 md:px-12 py-8 md:py-10 flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex items-center gap-5 md:pr-10 md:border-r border-offwhite/15">
-              <div className="shrink-0 w-14 h-14 rounded-full bg-offwhite/10 border border-offwhite/20 flex items-center justify-center">
-                <InstagramIcon size={24} strokeWidth={1.5} className="text-offwhite" />
+        <div className="max-w-4xl mx-auto mb-8 lg:mb-10">
+          <div className="bg-anthracite text-offwhite px-6 md:px-10 py-5 md:py-6 flex flex-col md:flex-row items-center gap-6 md:gap-10">
+            <div className="flex items-center gap-4 md:pr-8 md:border-r border-offwhite/15">
+              <div className="shrink-1 w-10 h-10 rounded-full bg-offwhite/10 border border-offwhite/20 flex items-center justify-center">
+                <InstagramIcon size={18} strokeWidth={1.5} className="text-offwhite" />
               </div>
               <div className="text-center md:text-left">
-                <p className="text-badge-today text-[11px] font-sans tracking-[0.25em] uppercase mb-1">
+                <p className="text-badge-today text-[10px] font-sans tracking-[0.25em] uppercase mb-0.5">
                   Instagram
                 </p>
-                <p className="font-serif text-xl md:text-2xl">@wijnhandelvanzoolingen</p>
+                <p className="font-serif text-base md:text-lg">@wijnhandelvanzoolingen</p>
               </div>
             </div>
-            <div className="flex-1 grid grid-cols-3 gap-4 md:gap-8 w-full">
+            <div className="flex-1 grid grid-cols-3 gap-3 md:gap-6 w-full">
               {stats.map((s) => (
                 <div key={s.label} className="text-center">
-                  <p className="font-serif text-2xl md:text-3xl lg:text-4xl font-medium">{s.value}</p>
-                  <p className="text-offwhite/60 text-[11px] md:text-xs font-sans tracking-[0.2em] uppercase mt-1">
+                  <p className="font-serif text-xl md:text-2xl font-medium">{s.value}</p>
+                  <p className="text-offwhite/60 text-[10px] font-sans tracking-[0.2em] uppercase mt-0.5">
                     {s.label}
                   </p>
                 </div>
@@ -106,16 +106,16 @@ const Instagram = () => {
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <a
             href={INSTAGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center gap-4 bg-anthracite text-offwhite font-sans text-sm tracking-[0.15em] uppercase px-10 py-5 hover:bg-bordeaux transition-colors duration-300"
+            className="group inline-flex items-center gap-3 bg-anthracite text-offwhite font-sans text-xs tracking-[0.15em] uppercase px-7 py-3.5 hover:bg-bordeaux transition-colors duration-300"
           >
-            <InstagramIcon size={18} strokeWidth={1.75} />
+            <InstagramIcon size={14} strokeWidth={1.75} />
             <span>Volgen op Instagram</span>
-            <span className="w-6 h-px bg-offwhite/60 group-hover:w-10 transition-all duration-300" />
+            <span className="w-5 h-px bg-offwhite/60 group-hover:w-8 transition-all duration-300" />
           </a>
         </div>
       </div>
