@@ -51,7 +51,7 @@ const Instagram = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto mb-10 lg:mb-12">
+        <div className="max-w-4xl mx-auto mb-6 lg:mb-8">
           <div
             className="relative text-offwhite px-6 md:px-10 py-6 md:py-7 flex flex-col md:flex-row items-center gap-6 md:gap-10 overflow-hidden rounded-[8px] shadow-[0_8px_30px_-12px_rgba(0,0,0,0.35)]"
             style={{
