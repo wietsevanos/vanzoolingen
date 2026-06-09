@@ -16,6 +16,7 @@ import armandLogo from '@/assets/brands/armand-de-brignac.png.asset.json';
 import kriptaLogo from '@/assets/brands/kripta.png.asset.json';
 import laTorderaLogo from '@/assets/brands/la-tordera.webp.asset.json';
 import pizzolatoLogo from '@/assets/brands/pizzolato.png.asset.json';
+import raventosLogo from '@/assets/brands/raventos-i-blanc.jpg.asset.json';
 
 export interface Brand {
   name: string;
@@ -79,6 +80,7 @@ export const categories: CategoryData[] = [
       { name: 'Celler Kripta', logo: kriptaLogo.url },
       { name: 'La Tordera', logo: laTorderaLogo.url },
       { name: 'Pizzolato', logo: pizzolatoLogo.url },
+      { name: "Ravent\u00F3s i Blanc", logo: raventosLogo.url },
     ],
   },
   {
