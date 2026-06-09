@@ -11,7 +11,7 @@ import krugLogo from '@/assets/brands/krug.png.asset.json';
 import domPerignonLogo from '@/assets/brands/dom-perignon.png.asset.json';
 import bollingerLogo from '@/assets/brands/bollinger.png.asset.json';
 import perrierJouetLogo from '@/assets/brands/perrier-jouet.png.asset.json';
-import louisRoedererLogo from '@/assets/brands/louis-roederer.jpg.asset.json';
+import louisRoedererLogo from '@/assets/brands/louis-roederer.png.asset.json';
 import armandLogo from '@/assets/brands/armand-de-brignac.png.asset.json';
 import kriptaLogo from '@/assets/brands/kripta.png.asset.json';
 import laTorderaLogo from '@/assets/brands/la-tordera.webp.asset.json';
