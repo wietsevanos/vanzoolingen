@@ -3,8 +3,15 @@ import champagneImage from '@/assets/assortment-champagne.png';
 import spiritsImage from '@/assets/assortment-spirits.png';
 import accessoriesImage from '@/assets/assortment-accessories.png';
 
+import moetLogo from '@/assets/brands/moet-chandon.png.asset.json';
+import veuveLogo from '@/assets/brands/veuve-clicquot.png.asset.json';
+import ruinartLogo from '@/assets/brands/ruinart.png.asset.json';
+import laurentLogo from '@/assets/brands/laurent-perrier.png.asset.json';
+import krugLogo from '@/assets/brands/krug.png.asset.json';
+
 export interface Brand {
   name: string;
+  logo?: string;
 }
 
 export interface CategoryData {
@@ -51,11 +58,11 @@ export const categories: CategoryData[] = [
     brandsSupertitle: 'Uit ons assortiment',
     brandsTitle: 'Champagnehuizen die wij voeren',
     brands: [
-      { name: "Mo\u00EBt & Chandon" },
-      { name: 'Veuve Clicquot' },
-      { name: 'Ruinart' },
-      { name: 'Laurent Perrier' },
-      { name: 'Krug' },
+      { name: "Mo\u00EBt & Chandon", logo: moetLogo.url },
+      { name: 'Veuve Clicquot', logo: veuveLogo.url },
+      { name: 'Ruinart', logo: ruinartLogo.url },
+      { name: 'Laurent Perrier', logo: laurentLogo.url },
+      { name: 'Krug', logo: krugLogo.url },
       { name: "Dom P\u00E9rignon" },
     ],
   },
