@@ -8,6 +8,14 @@ import veuveLogo from '@/assets/brands/veuve-clicquot.png.asset.json';
 import ruinartLogo from '@/assets/brands/ruinart.png.asset.json';
 import laurentLogo from '@/assets/brands/laurent-perrier.png.asset.json';
 import krugLogo from '@/assets/brands/krug.png.asset.json';
+import domPerignonLogo from '@/assets/brands/dom-perignon.png.asset.json';
+import bollingerLogo from '@/assets/brands/bollinger.png.asset.json';
+import perrierJouetLogo from '@/assets/brands/perrier-jouet.png.asset.json';
+import louisRoedererLogo from '@/assets/brands/louis-roederer.jpg.asset.json';
+import armandLogo from '@/assets/brands/armand-de-brignac.png.asset.json';
+import kriptaLogo from '@/assets/brands/kripta.png.asset.json';
+import laTorderaLogo from '@/assets/brands/la-tordera.webp.asset.json';
+import pizzolatoLogo from '@/assets/brands/pizzolato.png.asset.json';
 
 export interface Brand {
   name: string;
@@ -63,7 +71,14 @@ export const categories: CategoryData[] = [
       { name: 'Ruinart', logo: ruinartLogo.url },
       { name: 'Laurent Perrier', logo: laurentLogo.url },
       { name: 'Krug', logo: krugLogo.url },
-      { name: "Dom P\u00E9rignon" },
+      { name: "Dom P\u00E9rignon", logo: domPerignonLogo.url },
+      { name: 'Bollinger', logo: bollingerLogo.url },
+      { name: "Perrier-Jou\u00EBt", logo: perrierJouetLogo.url },
+      { name: 'Louis Roederer', logo: louisRoedererLogo.url },
+      { name: 'Armand de Brignac', logo: armandLogo.url },
+      { name: 'Celler Kripta', logo: kriptaLogo.url },
+      { name: 'La Tordera', logo: laTorderaLogo.url },
+      { name: 'Pizzolato', logo: pizzolatoLogo.url },
     ],
   },
   {
