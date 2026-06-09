@@ -79,11 +79,20 @@ const CategoryPage = () => {
               {category.brands.map((brand) => (
                 <div
                   key={brand.name}
-                  className="bg-offwhite border border-border p-6 md:p-8 flex items-center justify-center text-center hover:border-bordeaux hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default group"
+                  className="bg-offwhite border border-border p-6 md:p-8 flex items-center justify-center text-center hover:border-bordeaux hover:shadow-lg hover:-translate-y-1 transition-all duration-300 cursor-default group min-h-[120px] md:min-h-[140px]"
                 >
-                  <span className="font-serif text-sm md:text-base text-anthracite group-hover:text-bordeaux transition-colors duration-300">
-                    {brand.name}
-                  </span>
+                  {brand.logo ? (
+                    <img
+                      src={brand.logo}
+                      alt={brand.name}
+                      className="max-h-16 md:max-h-20 w-auto object-contain transition-all duration-300 group-hover:scale-105"
+                      loading="lazy"
+                    />
+                  ) : (
+                    <span className="font-serif text-sm md:text-base text-anthracite group-hover:text-bordeaux transition-colors duration-300">
+                      {brand.name}
+                    </span>
+                  )}
                 </div>
               ))}
             </div>
