@@ -3,23 +3,29 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '@/assets/wine-glass-logo.png';
 const navLinks = [{
-  href: '#over-ons',
+  id: 'over-ons',
   label: 'Over Ons'
 }, {
-  href: '#assortiment',
+  id: 'assortiment',
   label: 'Assortiment'
 }, {
-  href: '#waarom',
+  id: 'waarom',
   label: 'Waarom Wij'
 }, {
-  href: '#locatie',
+  id: 'locatie',
   label: 'Bezoek Ons'
 }, {
-  href: '#contact',
+  id: 'contact',
   label: 'Contact'
 }];
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const scrollToId = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setIsMenuOpen(false);
+  };
   return <header className="fixed top-0 left-0 right-0 z-50 bg-offwhite/95 backdrop-blur-sm border-b-4 border-bordeaux">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="flex items-center justify-between h-20">
@@ -33,7 +39,7 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-10">
-            {navLinks.map(link => <a key={link.href} href={link.href} className="text-sm font-medium text-anthracite-light hover:text-bordeaux transition-colors tracking-wide uppercase">
+            {navLinks.map(link => <a key={link.id} href={`#${link.id}`} onClick={scrollToId(link.id)} className="text-sm font-medium text-anthracite-light hover:text-bordeaux transition-colors tracking-wide uppercase cursor-pointer">
                 {link.label}
               </a>)}
           </nav>
@@ -41,7 +47,8 @@ const Header = () => {
           {/* CTA Buttons */}
           <div className="hidden lg:flex items-center gap-3">
             <a 
-              href="#nieuwsbrief" 
+              href="#nieuwsbrief"
+              onClick={scrollToId('nieuwsbrief')}
               className="flex items-center gap-2 px-6 py-3 bg-bordeaux text-primary-foreground text-sm font-medium tracking-wide uppercase hover:bg-bordeaux-dark hover:shadow-lg hover:scale-105 transition-all duration-300 group"
             >
               <span>Nieuwsbrief</span>
@@ -81,11 +88,11 @@ const Header = () => {
         {/* Mobile Navigation */}
         {isMenuOpen && <nav className="lg:hidden py-6 border-t border-border">
             <div className="flex flex-col gap-4">
-              {navLinks.map(link => <a key={link.href} href={link.href} onClick={() => setIsMenuOpen(false)} className="text-sm font-medium text-anthracite-light hover:text-bordeaux transition-colors tracking-wide uppercase py-2">
+              {navLinks.map(link => <a key={link.id} href={`#${link.id}`} onClick={scrollToId(link.id)} className="text-sm font-medium text-anthracite-light hover:text-bordeaux transition-colors tracking-wide uppercase py-2 cursor-pointer">
                   {link.label}
                 </a>)}
               <div className="flex gap-3 mt-4">
-                <a href="#nieuwsbrief" onClick={() => setIsMenuOpen(false)} className="flex-1 px-6 py-3 bg-bordeaux text-primary-foreground text-sm font-medium tracking-wide uppercase text-center hover:bg-bordeaux-dark transition-colors">
+                <a href="#nieuwsbrief" onClick={scrollToId('nieuwsbrief')} className="flex-1 px-6 py-3 bg-bordeaux text-primary-foreground text-sm font-medium tracking-wide uppercase text-center hover:bg-bordeaux-dark transition-colors cursor-pointer">
                   Nieuwsbrief
                 </a>
                 <a
