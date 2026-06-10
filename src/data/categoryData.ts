@@ -46,6 +46,14 @@ import pedroEscuderoLogo from '@/assets/brands/pedro-escudero.webp';
 import villaBlancheLogo from '@/assets/brands/villa-blanche.png';
 import seegerLogo from '@/assets/brands/weingut-seeger.avif';
 import whisperingAngelLogo from '@/assets/brands/whispering-angel-v2.png';
+import belondradeLogo from '@/assets/brands/belondrade.png';
+import franzKellerLogo from '@/assets/brands/franz-keller.png';
+import elCotoLogo from '@/assets/brands/el-coto.png';
+import santaTresaLogo from '@/assets/brands/santa-tresa.png';
+import antinoriLogo from '@/assets/brands/marchesi-antinori.png';
+import gajaLogo from '@/assets/brands/gaja.png';
+import roccaDelleMacieLogo from '@/assets/brands/rocca-delle-macie.png';
+import paulPrieurLogo from '@/assets/brands/paul-prieur.png';
 
 import ardbegLogo from '@/assets/brands/ardbeg.avif';
 import cirocLogo from '@/assets/brands/ciroc.png';
@@ -133,6 +141,14 @@ export const categories: CategoryData[] = [
       { name: 'Villa Blanche', logo: villaBlancheLogo },
       { name: 'Weingut Seeger', logo: seegerLogo },
       { name: 'Whispering Angel', logo: whisperingAngelLogo },
+      { name: 'Belondrade', logo: belondradeLogo },
+      { name: 'Franz Keller', logo: franzKellerLogo },
+      { name: 'El Coto de Rioja', logo: elCotoLogo },
+      { name: 'Santa Tresa', logo: santaTresaLogo },
+      { name: 'Marchesi Antinori', logo: antinoriLogo },
+      { name: 'Gaja', logo: gajaLogo },
+      { name: 'Rocca delle Macìe', logo: roccaDelleMacieLogo },
+      { name: 'Paul Prieur et Fils', logo: paulPrieurLogo },
     ],
   },
   {
