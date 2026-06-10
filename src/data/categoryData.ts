@@ -47,6 +47,17 @@ import villaBlancheLogo from '@/assets/brands/villa-blanche.png';
 import seegerLogo from '@/assets/brands/weingut-seeger.avif';
 import whisperingAngelLogo from '@/assets/brands/whispering-angel-v2.png';
 
+import ardbegLogo from '@/assets/brands/ardbeg.avif';
+import cirocLogo from '@/assets/brands/ciroc.png';
+import lagavulinLogo from '@/assets/brands/lagavulin.png';
+import taliskerLogo from '@/assets/brands/talisker.png';
+import absolutLogo from '@/assets/brands/absolut.webp';
+import aperolLogo from '@/assets/brands/aperol.png';
+import baileysLogo from '@/assets/brands/baileys.png';
+import balvenieLogo from '@/assets/brands/balvenie.png';
+import belugaLogo from '@/assets/brands/beluga.png';
+import belvedereLogo from '@/assets/brands/belvedere.png';
+
 export interface Brand {
   name: string;
   logo?: string;
@@ -137,14 +148,16 @@ export const categories: CategoryData[] = [
     brandsSupertitle: 'Uit ons assortiment',
     brandsTitle: 'Merken die wij aanbieden',
     brands: [
-      { name: 'Macallan' },
-      { name: 'Glenfiddich' },
-      { name: 'Hennessy' },
-      { name: "R\u00E9my Martin" },
-      { name: "Hendrick's Gin" },
-      { name: "Diplomático" },
-      { name: 'Tanqueray' },
-      { name: 'Johnnie Walker' },
+      { name: 'Ardbeg', logo: ardbegLogo },
+      { name: 'Cîroc Vodka', logo: cirocLogo },
+      { name: 'Lagavulin', logo: lagavulinLogo },
+      { name: 'Talisker', logo: taliskerLogo },
+      { name: 'Absolut Vodka', logo: absolutLogo },
+      { name: 'Aperol', logo: aperolLogo },
+      { name: 'Baileys', logo: baileysLogo },
+      { name: 'The Balvenie', logo: balvenieLogo },
+      { name: 'Beluga Vodka', logo: belugaLogo },
+      { name: 'Belvedere Vodka', logo: belvedereLogo },
     ],
   },
   {
