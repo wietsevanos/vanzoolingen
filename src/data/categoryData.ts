@@ -58,7 +58,7 @@ import balvenieLogo from '@/assets/brands/balvenie.png';
 import belugaLogo from '@/assets/brands/beluga.png';
 import belvedereLogo from '@/assets/brands/belvedere.png';
 
-import fioritoLogo from '@/assets/brands/fiorito.png';
+
 import glenfiddichLogo from '@/assets/brands/glenfiddich.png';
 import greyGooseLogo from '@/assets/brands/grey-goose.png';
 import hennessyLogo from '@/assets/brands/hennessy.png';
