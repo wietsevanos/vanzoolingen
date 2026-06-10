@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Instagram as InstagramIcon } from 'lucide-react';
 
 const Instagram = () => {
   const widgetRef = useRef<HTMLDivElement>(null);
@@ -33,6 +34,11 @@ const Instagram = () => {
     <section id="instagram" className="py-24 lg:py-32 bg-beige">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="text-center mb-16">
+          <div className="flex justify-center mb-6">
+            <div className="w-14 h-14 border border-olive/40 flex items-center justify-center">
+              <InstagramIcon size={26} strokeWidth={1.5} className="text-olive" />
+            </div>
+          </div>
           <p className="text-olive text-sm font-sans tracking-[0.2em] uppercase mb-4">
             Blijf op de hoogte
           </p>
