@@ -179,7 +179,6 @@ export const categories: CategoryData[] = [
       { name: 'The Balvenie', logo: balvenieLogo },
       { name: 'Beluga Vodka', logo: belugaLogo },
       { name: 'Belvedere Vodka', logo: belvedereLogo },
-      { name: 'Limoncello di Fiorito', logo: fioritoLogo },
       { name: 'Glenfiddich', logo: glenfiddichLogo },
       { name: 'Grey Goose', logo: greyGooseLogo },
       { name: 'Hennessy', logo: hennessyLogo },
