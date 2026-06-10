@@ -1,0 +1,20 @@
+# Serve real files (images, JS, CSS, fonts) directly.
+# We use HashRouter so no SPA rewrite to index.html is needed.
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # If the requested file or directory exists, serve it as-is.
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Fallback: send unknown paths to index.html (HashRouter handles routing).
+  RewriteRule ^ index.html [L]
+</IfModule>
+
+# Make sure modern image formats are served with correct MIME types.
+<IfModule mod_mime.c>
+  AddType image/webp .webp
+  AddType image/avif .avif
+  AddType image/svg+xml .svg
+</IfModule>
