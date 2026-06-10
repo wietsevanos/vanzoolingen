@@ -3,49 +3,49 @@ import champagneImage from '@/assets/assortment-champagne.png';
 import spiritsImage from '@/assets/assortment-spirits.png';
 import accessoriesImage from '@/assets/assortment-accessories.png';
 
-import moetLogo from '@/assets/brands/moet-chandon.png.asset.json';
-import veuveLogo from '@/assets/brands/veuve-clicquot.png.asset.json';
-import ruinartLogo from '@/assets/brands/ruinart.png.asset.json';
-import laurentLogo from '@/assets/brands/laurent-perrier.png.asset.json';
-import krugLogo from '@/assets/brands/krug.png.asset.json';
-import domPerignonLogo from '@/assets/brands/dom-perignon.png.asset.json';
-import bollingerLogo from '@/assets/brands/bollinger.png.asset.json';
-import perrierJouetLogo from '@/assets/brands/perrier-jouet.png.asset.json';
-import louisRoedererLogo from '@/assets/brands/louis-roederer.png.asset.json';
-import armandLogo from '@/assets/brands/armand-de-brignac.png.asset.json';
-import kriptaLogo from '@/assets/brands/kripta.png.asset.json';
-import laTorderaLogo from '@/assets/brands/la-tordera.webp.asset.json';
-import pizzolatoLogo from '@/assets/brands/pizzolato.png.asset.json';
-import raventosLogo from '@/assets/brands/raventos-i-blanc.jpg.asset.json';
+import moetLogo from '@/assets/brands/moet-chandon.png';
+import veuveLogo from '@/assets/brands/veuve-clicquot.png';
+import ruinartLogo from '@/assets/brands/ruinart.png';
+import laurentLogo from '@/assets/brands/laurent-perrier.png';
+import krugLogo from '@/assets/brands/krug.png';
+import domPerignonLogo from '@/assets/brands/dom-perignon.png';
+import bollingerLogo from '@/assets/brands/bollinger.png';
+import perrierJouetLogo from '@/assets/brands/perrier-jouet.png';
+import louisRoedererLogo from '@/assets/brands/louis-roederer.png';
+import armandLogo from '@/assets/brands/armand-de-brignac.png';
+import kriptaLogo from '@/assets/brands/kripta.png';
+import laTorderaLogo from '@/assets/brands/la-tordera.webp';
+import pizzolatoLogo from '@/assets/brands/pizzolato.png';
+import raventosLogo from '@/assets/brands/raventos-i-blanc.jpg';
 
-import coppolaLogo from '@/assets/brands/francis-ford-coppola.png.asset.json';
-import bernardusLogo from '@/assets/brands/bernardus-black.png.asset.json';
-import elenaWalchLogo from '@/assets/brands/elena-walch.webp.asset.json';
-import mezzacoronaLogo from '@/assets/brands/mezzacorona.png.asset.json';
-import baronDeLeyLogo from '@/assets/brands/baron-de-ley.png.asset.json';
-import cantineParadisoLogo from '@/assets/brands/cantine-paradiso.webp.asset.json';
-import delaireGraffLogo from '@/assets/brands/delaire-graff.webp.asset.json';
-import faiveleyLogo from '@/assets/brands/domaine-faiveley.avif.asset.json';
-import leflaiveLogo from '@/assets/brands/domaine-leflaive.png.asset.json';
-import enateLogo from '@/assets/brands/enate.webp.asset.json';
-import moutonLogo from '@/assets/brands/mouton-rothschild.png.asset.json';
-import nittnausLogo from '@/assets/brands/nittnaus.png.asset.json';
-import olivierLeflaiveLogo from '@/assets/brands/olivier-leflaive.png.asset.json';
-import opusOneLogo from '@/assets/brands/opus-one.png.asset.json';
-import ottLogo from '@/assets/brands/domaines-ott.webp.asset.json';
-import waterkloofLogo from '@/assets/brands/waterkloof.webp.asset.json';
-import meerlustLogo from '@/assets/brands/meerlust.png.asset.json';
-import minutyLogo from '@/assets/brands/minuty.png.asset.json';
-import mipLogo from '@/assets/brands/mip-black.png.asset.json';
-import mistyCoveLogo from '@/assets/brands/misty-cove.png.asset.json';
-import saintClairLogo from '@/assets/brands/saint-clair.png.asset.json';
-import salenteinLogo from '@/assets/brands/salentein.png.asset.json';
-import taylorsLogo from '@/assets/brands/taylors-port.png.asset.json';
-import ultimateProvenceLogo from '@/assets/brands/up.avif.asset.json';
-import pedroEscuderoLogo from '@/assets/brands/pedro-escudero.webp.asset.json';
-import villaBlancheLogo from '@/assets/brands/villa-blanche.png.asset.json';
-import seegerLogo from '@/assets/brands/weingut-seeger.avif.asset.json';
-import whisperingAngelLogo from '@/assets/brands/whispering-angel-v2.png.asset.json';
+import coppolaLogo from '@/assets/brands/francis-ford-coppola.png';
+import bernardusLogo from '@/assets/brands/bernardus-black.png';
+import elenaWalchLogo from '@/assets/brands/elena-walch.webp';
+import mezzacoronaLogo from '@/assets/brands/mezzacorona.png';
+import baronDeLeyLogo from '@/assets/brands/baron-de-ley.png';
+import cantineParadisoLogo from '@/assets/brands/cantine-paradiso.webp';
+import delaireGraffLogo from '@/assets/brands/delaire-graff.webp';
+import faiveleyLogo from '@/assets/brands/domaine-faiveley.avif';
+import leflaiveLogo from '@/assets/brands/domaine-leflaive.png';
+import enateLogo from '@/assets/brands/enate.webp';
+import moutonLogo from '@/assets/brands/mouton-rothschild.png';
+import nittnausLogo from '@/assets/brands/nittnaus.png';
+import olivierLeflaiveLogo from '@/assets/brands/olivier-leflaive.png';
+import opusOneLogo from '@/assets/brands/opus-one.png';
+import ottLogo from '@/assets/brands/domaines-ott.webp';
+import waterkloofLogo from '@/assets/brands/waterkloof.webp';
+import meerlustLogo from '@/assets/brands/meerlust.png';
+import minutyLogo from '@/assets/brands/minuty.png';
+import mipLogo from '@/assets/brands/mip-black.png';
+import mistyCoveLogo from '@/assets/brands/misty-cove.png';
+import saintClairLogo from '@/assets/brands/saint-clair.png';
+import salenteinLogo from '@/assets/brands/salentein.png';
+import taylorsLogo from '@/assets/brands/taylors-port.png';
+import ultimateProvenceLogo from '@/assets/brands/up.avif';
+import pedroEscuderoLogo from '@/assets/brands/pedro-escudero.webp';
+import villaBlancheLogo from '@/assets/brands/villa-blanche.png';
+import seegerLogo from '@/assets/brands/weingut-seeger.avif';
+import whisperingAngelLogo from '@/assets/brands/whispering-angel-v2.png';
 
 export interface Brand {
   name: string;
@@ -73,34 +73,34 @@ export const categories: CategoryData[] = [
     brandsSupertitle: 'Uit ons assortiment',
     brandsTitle: 'Wijnhuizen die wij aanbieden',
     brands: [
-      { name: 'Francis Ford Coppola', logo: coppolaLogo.url },
-      { name: 'Bernardus', logo: bernardusLogo.url },
-      { name: 'Elena Walch', logo: elenaWalchLogo.url },
-      { name: 'Mezzacorona', logo: mezzacoronaLogo.url },
-      { name: 'Baron de Ley', logo: baronDeLeyLogo.url },
-      { name: 'Cantine Paradiso', logo: cantineParadisoLogo.url },
-      { name: 'Delaire Graff Estate', logo: delaireGraffLogo.url },
-      { name: 'Domaine Faiveley', logo: faiveleyLogo.url },
-      { name: 'Domaine Leflaive', logo: leflaiveLogo.url },
-      { name: 'Enate', logo: enateLogo.url },
-      { name: 'Château Mouton Rothschild', logo: moutonLogo.url },
-      { name: 'Gebrüder Nittnaus', logo: nittnausLogo.url },
-      { name: 'Olivier Leflaive', logo: olivierLeflaiveLogo.url },
-      { name: 'Opus One', logo: opusOneLogo.url },
-      { name: 'Domaines Ott', logo: ottLogo.url },
-      { name: 'Waterkloof', logo: waterkloofLogo.url },
-      { name: 'Meerlust', logo: meerlustLogo.url },
-      { name: 'Minuty', logo: minutyLogo.url },
-      { name: 'Le Domaine des Diables (MiP)', logo: mipLogo.url },
-      { name: 'Misty Cove Wines', logo: mistyCoveLogo.url },
-      { name: 'Saint Clair Family Estate', logo: saintClairLogo.url },
-      { name: 'Salentein', logo: salenteinLogo.url },
-      { name: "Taylor's Port", logo: taylorsLogo.url },
-      { name: 'Ultimate Provence', logo: ultimateProvenceLogo.url },
-      { name: 'Pedro Escudero', logo: pedroEscuderoLogo.url },
-      { name: 'Villa Blanche', logo: villaBlancheLogo.url },
-      { name: 'Weingut Seeger', logo: seegerLogo.url },
-      { name: 'Whispering Angel', logo: whisperingAngelLogo.url },
+      { name: 'Francis Ford Coppola', logo: coppolaLogo },
+      { name: 'Bernardus', logo: bernardusLogo },
+      { name: 'Elena Walch', logo: elenaWalchLogo },
+      { name: 'Mezzacorona', logo: mezzacoronaLogo },
+      { name: 'Baron de Ley', logo: baronDeLeyLogo },
+      { name: 'Cantine Paradiso', logo: cantineParadisoLogo },
+      { name: 'Delaire Graff Estate', logo: delaireGraffLogo },
+      { name: 'Domaine Faiveley', logo: faiveleyLogo },
+      { name: 'Domaine Leflaive', logo: leflaiveLogo },
+      { name: 'Enate', logo: enateLogo },
+      { name: 'Château Mouton Rothschild', logo: moutonLogo },
+      { name: 'Gebrüder Nittnaus', logo: nittnausLogo },
+      { name: 'Olivier Leflaive', logo: olivierLeflaiveLogo },
+      { name: 'Opus One', logo: opusOneLogo },
+      { name: 'Domaines Ott', logo: ottLogo },
+      { name: 'Waterkloof', logo: waterkloofLogo },
+      { name: 'Meerlust', logo: meerlustLogo },
+      { name: 'Minuty', logo: minutyLogo },
+      { name: 'Le Domaine des Diables (MiP)', logo: mipLogo },
+      { name: 'Misty Cove Wines', logo: mistyCoveLogo },
+      { name: 'Saint Clair Family Estate', logo: saintClairLogo },
+      { name: 'Salentein', logo: salenteinLogo },
+      { name: "Taylor's Port", logo: taylorsLogo },
+      { name: 'Ultimate Provence', logo: ultimateProvenceLogo },
+      { name: 'Pedro Escudero', logo: pedroEscuderoLogo },
+      { name: 'Villa Blanche', logo: villaBlancheLogo },
+      { name: 'Weingut Seeger', logo: seegerLogo },
+      { name: 'Whispering Angel', logo: whisperingAngelLogo },
     ],
   },
   {
@@ -112,20 +112,20 @@ export const categories: CategoryData[] = [
     brandsSupertitle: 'Uit ons assortiment',
     brandsTitle: 'Champagnehuizen die wij voeren',
     brands: [
-      { name: "Mo\u00EBt & Chandon", logo: moetLogo.url },
-      { name: 'Veuve Clicquot', logo: veuveLogo.url },
-      { name: 'Ruinart', logo: ruinartLogo.url },
-      { name: 'Laurent Perrier', logo: laurentLogo.url },
-      { name: 'Krug', logo: krugLogo.url },
-      { name: "Dom P\u00E9rignon", logo: domPerignonLogo.url },
-      { name: 'Bollinger', logo: bollingerLogo.url },
-      { name: "Perrier-Jou\u00EBt", logo: perrierJouetLogo.url },
-      { name: 'Louis Roederer', logo: louisRoedererLogo.url },
-      { name: 'Armand de Brignac', logo: armandLogo.url },
-      { name: 'Celler Kripta', logo: kriptaLogo.url },
-      { name: 'La Tordera', logo: laTorderaLogo.url },
-      { name: 'Pizzolato', logo: pizzolatoLogo.url },
-      { name: "Ravent\u00F3s i Blanc", logo: raventosLogo.url },
+      { name: "Mo\u00EBt & Chandon", logo: moetLogo },
+      { name: 'Veuve Clicquot', logo: veuveLogo },
+      { name: 'Ruinart', logo: ruinartLogo },
+      { name: 'Laurent Perrier', logo: laurentLogo },
+      { name: 'Krug', logo: krugLogo },
+      { name: "Dom P\u00E9rignon", logo: domPerignonLogo },
+      { name: 'Bollinger', logo: bollingerLogo },
+      { name: "Perrier-Jou\u00EBt", logo: perrierJouetLogo },
+      { name: 'Louis Roederer', logo: louisRoedererLogo },
+      { name: 'Armand de Brignac', logo: armandLogo },
+      { name: 'Celler Kripta', logo: kriptaLogo },
+      { name: 'La Tordera', logo: laTorderaLogo },
+      { name: 'Pizzolato', logo: pizzolatoLogo },
+      { name: "Ravent\u00F3s i Blanc", logo: raventosLogo },
     ],
   },
   {
