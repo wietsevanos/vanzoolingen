@@ -19,9 +19,18 @@ const Location = () => {
   const vacationEnd = new Date(2026, 1, 26, 23, 59, 59); // 26 feb 2026
   const isVacationWeek = now <= vacationEnd;
 
+  // Zomervakantie: week 28 t/m 30 (ma 6 juli t/m zo 26 juli 2026)
+  // Zon t/m woe gesloten, do t/m za normaal open
+  const summerStart = new Date(2026, 6, 6, 0, 0, 0); // 6 juli 2026
+  const summerEnd = new Date(2026, 6, 26, 23, 59, 59); // 26 juli 2026
+  const isSummerVacation = now >= summerStart && now <= summerEnd;
+
   const getHours = (item: typeof openingHours[number]) => {
     if (isVacationWeek && (item.dayIndex === 2 || item.dayIndex === 3)) {
       return 'Gesloten (voorjaarsvakantie)';
+    }
+    if (isSummerVacation && (item.dayIndex === 0 || item.dayIndex === 1 || item.dayIndex === 2 || item.dayIndex === 3)) {
+      return 'Gesloten (zomervakantie)';
     }
     return item.hours;
   };
@@ -78,9 +87,15 @@ const Location = () => {
 
             {/* Holiday notice - above opening hours */}
             <div className="mb-6 bg-olive/10 border border-olive/20 px-5 py-4">
-              <p className="text-anthracite font-sans text-sm leading-relaxed">
-                Op feestdagen gooien we de deuren soms wat eerder dicht, of juist extra wijd open. Check bij twijfel even onze socials of bel ons gerust!
-              </p>
+              {isSummerVacation ? (
+                <p className="text-anthracite font-sans text-sm leading-relaxed">
+                  <strong className="font-semibold">Zomervakantie (week 28 tot 30):</strong> zondag tot en met woensdag zijn we gesloten. Donderdag tot en met zaterdag zijn we geopend volgens de normale openingstijden.
+                </p>
+              ) : (
+                <p className="text-anthracite font-sans text-sm leading-relaxed">
+                  Op feestdagen gooien we de deuren soms wat eerder dicht, of juist extra wijd open. Check bij twijfel even onze socials of bel ons gerust!
+                </p>
+              )}
             </div>
 
             <div className="bg-offwhite shadow-lg flex-1 flex flex-col overflow-hidden">
