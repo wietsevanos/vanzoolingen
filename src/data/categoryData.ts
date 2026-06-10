@@ -58,6 +58,17 @@ import balvenieLogo from '@/assets/brands/balvenie.png';
 import belugaLogo from '@/assets/brands/beluga.png';
 import belvedereLogo from '@/assets/brands/belvedere.png';
 
+import fioritoLogo from '@/assets/brands/fiorito.png';
+import glenfiddichLogo from '@/assets/brands/glenfiddich.png';
+import greyGooseLogo from '@/assets/brands/grey-goose.png';
+import hennessyLogo from '@/assets/brands/hennessy.png';
+import hibikiLogo from '@/assets/brands/hibiki.png';
+import johnnieWalkerLogo from '@/assets/brands/johnnie-walker.png';
+import montifaudLogo from '@/assets/brands/montifaud.png';
+import florDeCanaLogo from '@/assets/brands/flor-de-cana.png';
+import macallanLogo from '@/assets/brands/macallan.png';
+import donJulioLogo from '@/assets/brands/don-julio.webp';
+
 export interface Brand {
   name: string;
   logo?: string;
@@ -158,6 +169,16 @@ export const categories: CategoryData[] = [
       { name: 'The Balvenie', logo: balvenieLogo },
       { name: 'Beluga Vodka', logo: belugaLogo },
       { name: 'Belvedere Vodka', logo: belvedereLogo },
+      { name: 'Limoncello di Fiorito', logo: fioritoLogo },
+      { name: 'Glenfiddich', logo: glenfiddichLogo },
+      { name: 'Grey Goose', logo: greyGooseLogo },
+      { name: 'Hennessy', logo: hennessyLogo },
+      { name: 'Hibiki', logo: hibikiLogo },
+      { name: 'Johnnie Walker', logo: johnnieWalkerLogo },
+      { name: 'Château de Montifaud', logo: montifaudLogo },
+      { name: 'Flor de Caña', logo: florDeCanaLogo },
+      { name: 'The Macallan', logo: macallanLogo },
+      { name: 'Don Julio', logo: donJulioLogo },
     ],
   },
   {
