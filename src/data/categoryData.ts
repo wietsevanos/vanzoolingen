@@ -38,6 +38,14 @@ import meerlustLogo from '@/assets/brands/meerlust.png.asset.json';
 import minutyLogo from '@/assets/brands/minuty.png.asset.json';
 import mipLogo from '@/assets/brands/mip.jpeg.asset.json';
 import mistyCoveLogo from '@/assets/brands/misty-cove.png.asset.json';
+import saintClairLogo from '@/assets/brands/saint-clair.png.asset.json';
+import salenteinLogo from '@/assets/brands/salentein.png.asset.json';
+import taylorsLogo from '@/assets/brands/taylors-port.png.asset.json';
+import ultimateProvenceLogo from '@/assets/brands/up.avif.asset.json';
+import pedroEscuderoLogo from '@/assets/brands/pedro-escudero.webp.asset.json';
+import villaBlancheLogo from '@/assets/brands/villa-blanche.png.asset.json';
+import seegerLogo from '@/assets/brands/weingut-seeger.avif.asset.json';
+import whisperingAngelLogo from '@/assets/brands/whispering-angel.png.asset.json';
 
 export interface Brand {
   name: string;
@@ -85,6 +93,14 @@ export const categories: CategoryData[] = [
       { name: 'Minuty', logo: minutyLogo.url },
       { name: 'Le Domaine des Diables (MiP)', logo: mipLogo.url },
       { name: 'Misty Cove Wines', logo: mistyCoveLogo.url },
+      { name: 'Saint Clair Family Estate', logo: saintClairLogo.url },
+      { name: 'Salentein', logo: salenteinLogo.url },
+      { name: "Taylor's Port", logo: taylorsLogo.url },
+      { name: 'Ultimate Provence', logo: ultimateProvenceLogo.url },
+      { name: 'Pedro Escudero', logo: pedroEscuderoLogo.url },
+      { name: 'Villa Blanche', logo: villaBlancheLogo.url },
+      { name: 'Weingut Seeger', logo: seegerLogo.url },
+      { name: 'Whispering Angel', logo: whisperingAngelLogo.url },
     ],
   },
   {
