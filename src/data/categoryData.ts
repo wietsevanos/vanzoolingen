@@ -28,6 +28,16 @@ import delaireGraffLogo from '@/assets/brands/delaire-graff.webp.asset.json';
 import faiveleyLogo from '@/assets/brands/domaine-faiveley.avif.asset.json';
 import leflaiveLogo from '@/assets/brands/domaine-leflaive.png.asset.json';
 import enateLogo from '@/assets/brands/enate.webp.asset.json';
+import moutonLogo from '@/assets/brands/mouton-rothschild.png.asset.json';
+import nittnausLogo from '@/assets/brands/nittnaus.png.asset.json';
+import olivierLeflaiveLogo from '@/assets/brands/olivier-leflaive.png.asset.json';
+import opusOneLogo from '@/assets/brands/opus-one.png.asset.json';
+import ottLogo from '@/assets/brands/domaines-ott.webp.asset.json';
+import waterkloofLogo from '@/assets/brands/waterkloof.webp.asset.json';
+import meerlustLogo from '@/assets/brands/meerlust.png.asset.json';
+import minutyLogo from '@/assets/brands/minuty.png.asset.json';
+import mipLogo from '@/assets/brands/mip.jpeg.asset.json';
+import mistyCoveLogo from '@/assets/brands/misty-cove.png.asset.json';
 
 export interface Brand {
   name: string;
@@ -65,6 +75,16 @@ export const categories: CategoryData[] = [
       { name: 'Domaine Faiveley', logo: faiveleyLogo.url },
       { name: 'Domaine Leflaive', logo: leflaiveLogo.url },
       { name: 'Enate', logo: enateLogo.url },
+      { name: 'Château Mouton Rothschild', logo: moutonLogo.url },
+      { name: 'Gebrüder Nittnaus', logo: nittnausLogo.url },
+      { name: 'Olivier Leflaive', logo: olivierLeflaiveLogo.url },
+      { name: 'Opus One', logo: opusOneLogo.url },
+      { name: 'Domaines Ott', logo: ottLogo.url },
+      { name: 'Waterkloof', logo: waterkloofLogo.url },
+      { name: 'Meerlust', logo: meerlustLogo.url },
+      { name: 'Minuty', logo: minutyLogo.url },
+      { name: 'Le Domaine des Diables (MiP)', logo: mipLogo.url },
+      { name: 'Misty Cove Wines', logo: mistyCoveLogo.url },
     ],
   },
   {
