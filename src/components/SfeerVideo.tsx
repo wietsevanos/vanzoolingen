@@ -1,5 +1,3 @@
-import sfeerVideo from '@/assets/sfeer.mp4.asset.json';
-
 const SfeerVideo = () => {
   return (
     <section id="sfeer" className="py-24 lg:py-32 bg-offwhite">
@@ -21,7 +19,7 @@ const SfeerVideo = () => {
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-full h-full border-2 border-olive pointer-events-none" />
             <video
-              src={sfeerVideo.url}
+              src="./video/sfeer.mp4"
               className="relative w-full aspect-video object-cover bg-anthracite"
               autoPlay
               muted
