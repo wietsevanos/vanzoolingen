@@ -19,7 +19,7 @@ import pizzolatoLogo from '@/assets/brands/pizzolato.png.asset.json';
 import raventosLogo from '@/assets/brands/raventos-i-blanc.jpg.asset.json';
 
 import coppolaLogo from '@/assets/brands/francis-ford-coppola.png.asset.json';
-import bernardusLogo from '@/assets/brands/bernardus.png.asset.json';
+import bernardusLogo from '@/assets/brands/bernardus-black.png.asset.json';
 import elenaWalchLogo from '@/assets/brands/elena-walch.webp.asset.json';
 import mezzacoronaLogo from '@/assets/brands/mezzacorona.png.asset.json';
 import baronDeLeyLogo from '@/assets/brands/baron-de-ley.png.asset.json';
@@ -36,7 +36,7 @@ import ottLogo from '@/assets/brands/domaines-ott.webp.asset.json';
 import waterkloofLogo from '@/assets/brands/waterkloof.webp.asset.json';
 import meerlustLogo from '@/assets/brands/meerlust.png.asset.json';
 import minutyLogo from '@/assets/brands/minuty.png.asset.json';
-import mipLogo from '@/assets/brands/mip.jpeg.asset.json';
+import mipLogo from '@/assets/brands/mip-black.png.asset.json';
 import mistyCoveLogo from '@/assets/brands/misty-cove.png.asset.json';
 import saintClairLogo from '@/assets/brands/saint-clair.png.asset.json';
 import salenteinLogo from '@/assets/brands/salentein.png.asset.json';
@@ -45,7 +45,7 @@ import ultimateProvenceLogo from '@/assets/brands/up.avif.asset.json';
 import pedroEscuderoLogo from '@/assets/brands/pedro-escudero.webp.asset.json';
 import villaBlancheLogo from '@/assets/brands/villa-blanche.png.asset.json';
 import seegerLogo from '@/assets/brands/weingut-seeger.avif.asset.json';
-import whisperingAngelLogo from '@/assets/brands/whispering-angel.png.asset.json';
+import whisperingAngelLogo from '@/assets/brands/whispering-angel-v2.png.asset.json';
 
 export interface Brand {
   name: string;
