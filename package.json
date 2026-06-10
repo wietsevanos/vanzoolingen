@@ -5,9 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/postbuild-static.mjs",
     "build:dev": "vite build --mode development",
-    "build:static": "vite build && node scripts/postbuild-static.mjs",
+    "build:static": "bun run build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
