@@ -69,6 +69,16 @@ import florDeCanaLogo from '@/assets/brands/flor-de-cana.png';
 import macallanLogo from '@/assets/brands/macallan.png';
 import donJulioLogo from '@/assets/brands/don-julio.webp';
 
+import obanLogo from '@/assets/brands/oban.png';
+import donPapaLogo from '@/assets/brands/don-papa.png';
+import remyMartinLogo from '@/assets/brands/remy-martin.png';
+import ronZacapaLogo from '@/assets/brands/ron-zacapa.png';
+import zuidamLogo from '@/assets/brands/zuidam.png';
+import salmariLogo from '@/assets/brands/salmari.webp';
+import dalmoreLogo from '@/assets/brands/dalmore.png';
+import yamazakiLogo from '@/assets/brands/yamazaki.png';
+import licor43Logo from '@/assets/brands/licor-43.png';
+
 export interface Brand {
   name: string;
   logo?: string;
@@ -179,6 +189,15 @@ export const categories: CategoryData[] = [
       { name: 'Flor de Caña', logo: florDeCanaLogo },
       { name: 'The Macallan', logo: macallanLogo },
       { name: 'Don Julio', logo: donJulioLogo },
+      { name: 'Oban', logo: obanLogo },
+      { name: 'Don Papa', logo: donPapaLogo },
+      { name: 'Rémy Martin', logo: remyMartinLogo },
+      { name: 'Ron Zacapa', logo: ronZacapaLogo },
+      { name: 'Zuidam', logo: zuidamLogo },
+      { name: 'Salmari', logo: salmariLogo },
+      { name: 'The Dalmore', logo: dalmoreLogo },
+      { name: 'Yamazaki', logo: yamazakiLogo },
+      { name: 'Licor 43', logo: licor43Logo },
     ],
   },
   {
