@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 
 const Instagram = () => {
+  const widgetRef = useRef<HTMLDivElement>(null);
   const scriptLoaded = useRef(false);
 
   useEffect(() => {
@@ -14,6 +15,18 @@ const Instagram = () => {
       document.head.appendChild(script);
     }
     scriptLoaded.current = true;
+  }, []);
+
+  useEffect(() => {
+    if (!widgetRef.current) return;
+    const el = document.createElement('behold-widget');
+    el.setAttribute('feed-id', '7N8r32pUv97kzXXNuDkD');
+    widgetRef.current.appendChild(el);
+    return () => {
+      if (widgetRef.current) {
+        widgetRef.current.innerHTML = '';
+      }
+    };
   }, []);
 
   return (
@@ -32,9 +45,7 @@ const Instagram = () => {
           </p>
         </div>
 
-        <div className="max-w-5xl mx-auto">
-          <behold-widget feed-id="7N8r32pUv97kzXXNuDkD" />
-        </div>
+        <div ref={widgetRef} className="max-w-5xl mx-auto" />
       </div>
     </section>
   );
