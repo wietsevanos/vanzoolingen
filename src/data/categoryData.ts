@@ -18,6 +18,17 @@ import laTorderaLogo from '@/assets/brands/la-tordera.webp.asset.json';
 import pizzolatoLogo from '@/assets/brands/pizzolato.png.asset.json';
 import raventosLogo from '@/assets/brands/raventos-i-blanc.jpg.asset.json';
 
+import coppolaLogo from '@/assets/brands/francis-ford-coppola.png.asset.json';
+import bernardusLogo from '@/assets/brands/bernardus.png.asset.json';
+import elenaWalchLogo from '@/assets/brands/elena-walch.webp.asset.json';
+import mezzacoronaLogo from '@/assets/brands/mezzacorona.png.asset.json';
+import baronDeLeyLogo from '@/assets/brands/baron-de-ley.png.asset.json';
+import cantineParadisoLogo from '@/assets/brands/cantine-paradiso.webp.asset.json';
+import delaireGraffLogo from '@/assets/brands/delaire-graff.webp.asset.json';
+import faiveleyLogo from '@/assets/brands/domaine-faiveley.avif.asset.json';
+import leflaiveLogo from '@/assets/brands/domaine-leflaive.png.asset.json';
+import enateLogo from '@/assets/brands/enate.webp.asset.json';
+
 export interface Brand {
   name: string;
   logo?: string;
@@ -44,18 +55,16 @@ export const categories: CategoryData[] = [
     brandsSupertitle: 'Uit ons assortiment',
     brandsTitle: 'Wijnhuizen die wij aanbieden',
     brands: [
-      { name: 'Francis Ford Coppola' },
-      { name: 'Bernardus' },
-      { name: 'Louis Jadot' },
-      { name: 'Gaja' },
-      { name: 'Antinori' },
-      { name: 'Boschendal' },
-      { name: 'J. Lohr' },
-      { name: 'Waterkloof' },
-      { name: 'Whispering Angel' },
-      { name: 'Jordan' },
-      { name: 'Meerlust' },
-      { name: 'Rothschild' },
+      { name: 'Francis Ford Coppola', logo: coppolaLogo.url },
+      { name: 'Bernardus', logo: bernardusLogo.url },
+      { name: 'Elena Walch', logo: elenaWalchLogo.url },
+      { name: 'Mezzacorona', logo: mezzacoronaLogo.url },
+      { name: 'Baron de Ley', logo: baronDeLeyLogo.url },
+      { name: 'Cantine Paradiso', logo: cantineParadisoLogo.url },
+      { name: 'Delaire Graff Estate', logo: delaireGraffLogo.url },
+      { name: 'Domaine Faiveley', logo: faiveleyLogo.url },
+      { name: 'Domaine Leflaive', logo: leflaiveLogo.url },
+      { name: 'Enate', logo: enateLogo.url },
     ],
   },
   {
