@@ -120,7 +120,8 @@ const CategoryPage = () => {
               Kom gerust langs in onze winkel in Overveen voor persoonlijk advies en om ons volledige assortiment te ontdekken.
             </p>
             <a
-              href="/#locatie"
+              href="#locatie"
+              onClick={goToHomeSection('locatie')}
               className="inline-flex items-center gap-2 px-8 py-4 bg-bordeaux text-primary-foreground font-sans text-sm font-medium tracking-wide uppercase hover:bg-bordeaux-dark hover:shadow-lg transition-all duration-300 group"
             >
               <MapPin size={16} />
