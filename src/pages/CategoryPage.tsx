@@ -14,7 +14,7 @@ const CategoryPage = () => {
 
   const goToHomeSection = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
-    if (location.pathname === '/') {
+    if (pathname === '/') {
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
