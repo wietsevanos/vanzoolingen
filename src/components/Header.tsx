@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logo from '@/assets/wine-glass-logo.png';
 const navLinks = [{
@@ -20,11 +20,21 @@ const navLinks = [{
 }];
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
   const scrollToId = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
     setIsMenuOpen(false);
+    const doScroll = () => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    };
+    if (location.pathname !== '/') {
+      navigate('/');
+      setTimeout(doScroll, 100);
+    } else {
+      doScroll();
+    }
   };
   return <header className="fixed top-0 left-0 right-0 z-50 bg-offwhite/95 backdrop-blur-sm border-b-4 border-bordeaux">
       <div className="container mx-auto px-6 lg:px-12">

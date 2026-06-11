@@ -4,6 +4,11 @@ import nix18Logo from '@/assets/nix18-logo.png';
 import { LiquidButton } from '@/components/ui/liquid-glass-button';
 
 const Hero = () => {
+  const handleNewsletterClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    const el = document.getElementById('nieuwsbrief');
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
   return (
     <section className="relative min-h-screen flex items-center justify-center">
       {/* 18+ Badge */}
@@ -45,7 +50,7 @@ const Hero = () => {
               size="xxl"
               className="h-10 px-5 md:h-11 md:px-8 text-offwhite text-xs md:text-sm font-medium tracking-wide uppercase rounded-none z-10 w-auto"
             >
-              <a href="#nieuwsbrief" style={{ color: 'hsl(40, 20%, 98%)' }}>
+              <a href="#nieuwsbrief" onClick={handleNewsletterClick} style={{ color: 'hsl(40, 20%, 98%)' }}>
                 Schrijf je in voor onze nieuwsbrief
               </a>
             </LiquidButton>

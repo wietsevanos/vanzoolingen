@@ -1,4 +1,4 @@
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams, Link, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect } from 'react';
 import { ArrowLeft, MapPin } from 'lucide-react';
 import Header from '@/components/Header';
@@ -9,7 +9,17 @@ import NotFound from './NotFound';
 const CategoryPage = () => {
   const { slug } = useParams<{ slug: string }>();
   const { pathname } = useLocation();
+  const navigate = useNavigate();
   const category = getCategoryBySlug(slug || '');
+
+  const goToHomeSection = (id: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigate('/');
+    setTimeout(() => {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 100);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -22,14 +32,15 @@ const CategoryPage = () => {
       <Header />
 
       {/* Floating back button */}
-      <Link
-        to="/#assortiment"
+      <a
+        href="#assortiment"
+        onClick={goToHomeSection('assortiment')}
         className="fixed bottom-8 right-8 z-40 flex items-center gap-2 px-5 py-3 bg-bordeaux text-primary-foreground font-sans text-sm font-medium tracking-wide shadow-lg hover:bg-bordeaux-dark hover:shadow-xl transition-all duration-300 group"
         aria-label="Terug naar assortiment"
       >
         <ArrowLeft size={16} strokeWidth={2} className="group-hover:-translate-x-1 transition-transform" />
         <span>Terug</span>
-      </Link>
+      </a>
 
       <main>
         {/* Hero */}
@@ -109,7 +120,8 @@ const CategoryPage = () => {
               Kom gerust langs in onze winkel in Overveen voor persoonlijk advies en om ons volledige assortiment te ontdekken.
             </p>
             <a
-              href="/#locatie"
+              href="#locatie"
+              onClick={goToHomeSection('locatie')}
               className="inline-flex items-center gap-2 px-8 py-4 bg-bordeaux text-primary-foreground font-sans text-sm font-medium tracking-wide uppercase hover:bg-bordeaux-dark hover:shadow-lg transition-all duration-300 group"
             >
               <MapPin size={16} />
