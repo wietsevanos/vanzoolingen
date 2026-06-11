@@ -14,11 +14,16 @@ const CategoryPage = () => {
 
   const goToHomeSection = (id: string) => (e: React.MouseEvent) => {
     e.preventDefault();
-    navigate('/');
-    setTimeout(() => {
+    if (location.pathname === '/') {
       const el = document.getElementById(id);
       if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 100);
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        const el = document.getElementById(id);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 200);
+    }
   };
 
   useEffect(() => {
