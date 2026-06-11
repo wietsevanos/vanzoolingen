@@ -40,7 +40,7 @@ const CategoryPage = () => {
       >
         <ArrowLeft size={16} strokeWidth={2} className="group-hover:-translate-x-1 transition-transform" />
         <span>Terug</span>
-      </Link>
+      </a>
 
       <main>
         {/* Hero */}
