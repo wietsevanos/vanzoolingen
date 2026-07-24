@@ -14,23 +14,14 @@ const Location = () => {
   const now = new Date();
   const today = now.getDay();
 
-  // Voorjaarsvakantie: dinsdag 18 feb t/m woensdag 19 feb 2026 gesloten
-  // Verloopt automatisch na zondag 22 feb 2026
-  const vacationEnd = new Date(2026, 1, 26, 23, 59, 59); // 26 feb 2026
-  const isVacationWeek = now <= vacationEnd;
-
-  // Zomervakantie: week 28 t/m 30 (ma 6 juli t/m zo 26 juli 2026)
-  // Zon t/m woe gesloten, do t/m za normaal open
-  const summerStart = new Date(2026, 6, 6, 0, 0, 0); // 6 juli 2026
-  const summerEnd = new Date(2026, 6, 26, 23, 59, 59); // 26 juli 2026
-  const isSummerVacation = now >= summerStart && now <= summerEnd;
+  // Tijdelijk: dinsdag en woensdag gesloten t/m 5 augustus 2026
+  // Verloopt automatisch na 5 augustus 2026
+  const augustClosureEnd = new Date(2026, 7, 5, 23, 59, 59); // 5 aug 2026
+  const isAugustClosure = now <= augustClosureEnd;
 
   const getHours = (item: typeof openingHours[number]) => {
-    if (isVacationWeek && (item.dayIndex === 2 || item.dayIndex === 3)) {
-      return 'Gesloten (voorjaarsvakantie)';
-    }
-    if (isSummerVacation && (item.dayIndex === 0 || item.dayIndex === 1 || item.dayIndex === 2 || item.dayIndex === 3)) {
-      return 'Gesloten (zomervakantie)';
+    if (isAugustClosure && (item.dayIndex === 2 || item.dayIndex === 3)) {
+      return 'Gesloten (t/m 5 augustus)';
     }
     return item.hours;
   };
@@ -87,9 +78,9 @@ const Location = () => {
 
             {/* Holiday notice - above opening hours */}
             <div className="mb-6 bg-olive/10 border border-olive/20 px-5 py-4">
-              {isSummerVacation ? (
+              {isAugustClosure ? (
                 <p className="text-anthracite font-sans text-sm leading-relaxed">
-                  <strong className="font-semibold">Zomervakantie (week 28 tot 30):</strong> zondag tot en met woensdag zijn we gesloten. Donderdag tot en met zaterdag zijn we geopend volgens de normale openingstijden.
+                  <strong className="font-semibold">Tijdelijke openingstijden tot en met 5 augustus:</strong> dinsdag en woensdag zijn we gesloten. Donderdag tot en met zaterdag zijn we geopend volgens de normale openingstijden.
                 </p>
               ) : (
                 <p className="text-anthracite font-sans text-sm leading-relaxed">
