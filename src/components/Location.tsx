@@ -78,9 +78,9 @@ const Location = () => {
 
             {/* Holiday notice - above opening hours */}
             <div className="mb-6 bg-olive/10 border border-olive/20 px-5 py-4">
-              {isSummerVacation ? (
+              {isAugustClosure ? (
                 <p className="text-anthracite font-sans text-sm leading-relaxed">
-                  <strong className="font-semibold">Zomervakantie (week 28 tot 30):</strong> zondag tot en met woensdag zijn we gesloten. Donderdag tot en met zaterdag zijn we geopend volgens de normale openingstijden.
+                  <strong className="font-semibold">Tijdelijke openingstijden tot en met 5 augustus:</strong> dinsdag en woensdag zijn we gesloten. Donderdag tot en met zaterdag zijn we geopend volgens de normale openingstijden.
                 </p>
               ) : (
                 <p className="text-anthracite font-sans text-sm leading-relaxed">
