@@ -43,7 +43,7 @@ const News = () => {
           </p>
         </div>
 
-        <div className="grid gap-px bg-olive/20 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {newsItems.map((item) => (
             <article key={`${item.title}-${item.date}`} className="flex flex-col bg-beige">
               <div className="aspect-[4/5] overflow-hidden bg-muted">
