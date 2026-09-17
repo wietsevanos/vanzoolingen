@@ -20,7 +20,7 @@ const newsItems: NewsItem[] = [
     title: 'Najaarsproeverij',
     category: 'Evenement',
     date: '8 november 2026, 13:00 tot 17:00',
-    location: 'TC VOC, Zeeweg 5, Overveen',
+    location: 'TC WOC, Zeeweg 5, Overveen',
     description:
       'Proef samen met ons de mooiste wijnen voor het najaar. De toegang is gratis, aanmelden is verplicht en kan in de winkel, via WhatsApp of per mail.',
     image: autumnTasting,
