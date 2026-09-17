@@ -10,6 +10,8 @@ type NewsItem = {
   image: string;
   link?: string;
   linkLabel?: string;
+  // Optioneel: na deze datum wordt het item automatisch niet meer getoond.
+  hideAfter?: Date;
 };
 
 // Voeg nieuwe berichten of evenementen simpelweg als extra item aan deze lijst toe.
@@ -24,10 +26,21 @@ const newsItems: NewsItem[] = [
     image: autumnTasting,
     link: 'https://wa.me/31628351298?text=Hallo%2C%20ik%20wil%20mij%20graag%20aanmelden%20voor%20de%20najaarsproeverij%20op%208%20november%202026.',
     linkLabel: 'Aanmelden via WhatsApp',
+    // Verdwijnt automatisch na 7 november 2026.
+    hideAfter: new Date(2026, 10, 8, 0, 0, 0),
   },
 ];
 
 const News = () => {
+  const today = new Date();
+  const visibleItems = newsItems.filter(
+    (item) => !item.hideAfter || today < item.hideAfter
+  );
+
+  if (visibleItems.length === 0) {
+    return null;
+  }
+
   return (
     <section id="nieuws" className="bg-offwhite py-24 lg:py-32">
       <div className="container mx-auto px-6 lg:px-12">
@@ -43,10 +56,13 @@ const News = () => {
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {newsItems.map((item) => (
-            <article key={`${item.title}-${item.date}`} className="flex flex-col bg-beige">
-              <div className="aspect-[4/5] overflow-hidden bg-muted">
+        <div className="grid gap-8">
+          {visibleItems.map((item) => (
+            <article
+              key={`${item.title}-${item.date}`}
+              className="flex flex-col overflow-hidden bg-beige lg:flex-row"
+            >
+              <div className="aspect-[4/5] w-full overflow-hidden bg-muted lg:aspect-auto lg:w-2/5 xl:w-1/3">
                 <img
                   src={item.image}
                   alt={`Aankondiging van ${item.title}`}
@@ -55,15 +71,15 @@ const News = () => {
                 />
               </div>
 
-              <div className="flex flex-1 flex-col p-7 lg:p-8">
+              <div className="flex flex-1 flex-col justify-center p-7 lg:p-10 xl:p-12">
                 <p className="mb-3 font-sans text-xs uppercase tracking-[0.2em] text-olive">
                   {item.category}
                 </p>
-                <h3 className="mb-5 font-serif text-2xl font-medium text-anthracite">
+                <h3 className="mb-5 font-serif text-2xl font-medium text-anthracite md:text-3xl">
                   {item.title}
                 </h3>
 
-                <div className="mb-5 space-y-3 border-y border-olive/20 py-4 font-sans text-sm text-anthracite/80">
+                <div className="mb-5 space-y-3 border-y border-olive/20 py-4 font-sans text-sm text-anthracite/80 md:text-base">
                   <p className="flex items-start gap-3">
                     <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-bordeaux" aria-hidden="true" />
                     <span>{item.date}</span>
@@ -74,7 +90,7 @@ const News = () => {
                   </p>
                 </div>
 
-                <p className="mb-7 flex-1 font-sans text-sm leading-relaxed text-anthracite/75">
+                <p className="mb-7 max-w-2xl font-sans text-sm leading-relaxed text-anthracite/75 md:text-base">
                   {item.description}
                 </p>
 
@@ -83,7 +99,7 @@ const News = () => {
                     href={item.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 self-start font-sans text-sm font-medium text-bordeaux transition-colors hover:text-bordeaux-dark"
+                    className="group inline-flex items-center gap-2 self-start font-sans text-sm font-medium text-bordeaux transition-colors hover:text-bordeaux-dark md:text-base"
                   >
                     <span>{item.linkLabel}</span>
                     <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
