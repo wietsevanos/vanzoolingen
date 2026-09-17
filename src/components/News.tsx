@@ -37,12 +37,8 @@ const News = () => {
     (item) => !item.hideAfter || today < item.hideAfter
   );
 
-  if (visibleItems.length === 0) {
-    return null;
-  }
-
   return (
-    <section id="nieuws" className="bg-offwhite py-24 lg:py-32">
+    <section id="nieuws" className="bg-olive/5 py-24 lg:py-32">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="mb-14 max-w-2xl lg:mb-16">
           <p className="mb-4 font-sans text-sm uppercase tracking-[0.2em] text-olive">
@@ -57,57 +53,71 @@ const News = () => {
         </div>
 
         <div className="grid gap-8">
-          {visibleItems.map((item) => (
-            <article
-              key={`${item.title}-${item.date}`}
-              className="flex flex-col overflow-hidden bg-beige lg:flex-row"
-            >
-              <div className="aspect-[4/5] w-full overflow-hidden bg-muted lg:aspect-auto lg:w-2/5 xl:w-1/3">
-                <img
-                  src={item.image}
-                  alt={`Aankondiging van ${item.title}`}
-                  className="h-full w-full object-cover"
-                  loading="lazy"
-                />
-              </div>
-
-              <div className="flex flex-1 flex-col justify-center p-7 lg:p-10 xl:p-12">
-                <p className="mb-3 font-sans text-xs uppercase tracking-[0.2em] text-olive">
-                  {item.category}
-                </p>
-                <h3 className="mb-5 font-serif text-2xl font-medium text-anthracite md:text-3xl">
-                  {item.title}
-                </h3>
-
-                <div className="mb-5 space-y-3 border-y border-olive/20 py-4 font-sans text-sm text-anthracite/80 md:text-base">
-                  <p className="flex items-start gap-3">
-                    <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-bordeaux" aria-hidden="true" />
-                    <span>{item.date}</span>
-                  </p>
-                  <p className="flex items-start gap-3">
-                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-bordeaux" aria-hidden="true" />
-                    <span>{item.location}</span>
-                  </p>
+          {visibleItems.length > 0 ? (
+            visibleItems.map((item) => (
+              <article
+                key={`${item.title}-${item.date}`}
+                className="flex flex-col overflow-hidden bg-beige lg:flex-row"
+              >
+                <div className="aspect-[4/5] w-full overflow-hidden bg-muted lg:aspect-auto lg:w-2/5 xl:w-1/3">
+                  <img
+                    src={item.image}
+                    alt={`Aankondiging van ${item.title}`}
+                    className="h-full w-full object-cover"
+                    loading="lazy"
+                  />
                 </div>
 
-                <p className="mb-7 max-w-2xl font-sans text-sm leading-relaxed text-anthracite/75 md:text-base">
-                  {item.description}
-                </p>
+                <div className="flex flex-1 flex-col justify-center p-7 lg:p-10 xl:p-12">
+                  <p className="mb-3 font-sans text-xs uppercase tracking-[0.2em] text-olive">
+                    {item.category}
+                  </p>
+                  <h3 className="mb-5 font-serif text-2xl font-medium text-anthracite md:text-3xl">
+                    {item.title}
+                  </h3>
 
-                {item.link && item.linkLabel && (
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 self-start font-sans text-sm font-medium text-bordeaux transition-colors hover:text-bordeaux-dark md:text-base"
-                  >
-                    <span>{item.linkLabel}</span>
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
-                  </a>
-                )}
+                  <div className="mb-5 space-y-3 border-y border-olive/20 py-4 font-sans text-sm text-anthracite/80 md:text-base">
+                    <p className="flex items-start gap-3">
+                      <CalendarDays className="mt-0.5 h-4 w-4 shrink-0 text-bordeaux" aria-hidden="true" />
+                      <span>{item.date}</span>
+                    </p>
+                    <p className="flex items-start gap-3">
+                      <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-bordeaux" aria-hidden="true" />
+                      <span>{item.location}</span>
+                    </p>
+                  </div>
+
+                  <p className="mb-7 max-w-2xl font-sans text-sm leading-relaxed text-anthracite/75 md:text-base">
+                    {item.description}
+                  </p>
+
+                  {item.link && item.linkLabel && (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group inline-flex items-center gap-2 self-start font-sans text-sm font-medium text-bordeaux transition-colors hover:text-bordeaux-dark md:text-base"
+                    >
+                      <span>{item.linkLabel}</span>
+                      <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" aria-hidden="true" />
+                    </a>
+                  )}
+                </div>
+              </article>
+            ))
+          ) : (
+            <article className="flex flex-col items-center justify-center overflow-hidden border-2 border-dashed border-olive/25 bg-beige p-10 text-center lg:p-16">
+              <div className="mb-5 flex h-14 w-14 items-center justify-center border border-olive/30 text-olive">
+                <CalendarDays className="h-6 w-6" aria-hidden="true" />
               </div>
+              <p className="mb-2 font-serif text-xl font-medium text-anthracite md:text-2xl">
+                Binnenkort meer nieuws
+              </p>
+              <p className="max-w-md font-sans text-sm leading-relaxed text-anthracite/70 md:text-base">
+                Hier verschijnen onze eerstvolgende proeverijen en evenementen. Hou de site in de gaten!
+              </p>
             </article>
-          ))}
+          )}
         </div>
       </div>
     </section>
