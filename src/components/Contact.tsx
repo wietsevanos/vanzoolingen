@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Mail, Phone } from 'lucide-react';
 import { toast } from 'sonner';
+import { supabase } from '@/integrations/supabase/client';
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -17,15 +18,20 @@ const Contact = () => {
     }
 
     setIsSubmitting(true);
-    
-    // Simulate submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
+    const { error } = await supabase.functions.invoke('contact-form', {
+      body: { name, email, message },
+    });
+    setIsSubmitting(false);
+
+    if (error) {
+      toast.error('Verzenden mislukt, probeer het later opnieuw of mail ons direct.');
+      return;
+    }
+
     toast.success('Uw bericht is verzonden!');
     setName('');
     setEmail('');
     setMessage('');
-    setIsSubmitting(false);
   };
 
   return (
