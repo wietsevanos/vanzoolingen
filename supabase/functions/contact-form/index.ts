@@ -4,7 +4,7 @@ import { z } from 'npm:zod@3'
 
 const GATEWAY_URL = 'https://connector-gateway.lovable.dev/resend'
 const TO = 'info@wijnhandelvanzoolingen.nl'
-const FROM = 'Website Van Zoolingen <website@wijnhandelvanzoolingen.nl>'
+const FROM = 'Website Van Zoolingen <website@pcicaritasboaz.nl>'
 
 const Body = z.object({
   name: z.string().trim().min(1).max(100),
