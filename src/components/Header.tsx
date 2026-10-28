@@ -9,9 +9,6 @@ const navLinks = [{
   id: 'assortiment',
   label: 'Assortiment'
 }, {
-  id: 'nieuws',
-  label: 'Nieuws'
-}, {
   id: 'waarom',
   label: 'Waarom Wij'
 }, {
