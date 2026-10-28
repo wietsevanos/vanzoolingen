@@ -3,7 +3,9 @@ import Hero from '@/components/Hero';
 import About from '@/components/About';
 import Assortment from '@/components/Assortment';
 import SfeerVideo from '@/components/SfeerVideo';
-import News from '@/components/News';
+// Nieuwssectie staat uit op verzoek van Wietse (okt 2026).
+// Import en <News /> hieronder terugzetten zodra hij opnieuw gevraagd wordt.
+// import News from '@/components/News';
 import Instagram from '@/components/Instagram';
 import WhyUs from '@/components/WhyUs';
 import Newsletter from '@/components/Newsletter';
@@ -22,7 +24,7 @@ const Index = () => {
         <About />
         <Assortment />
         <SfeerVideo />
-        <News />
+        {/* <News /> */}
         <Instagram />
         <WhyUs />
         <Newsletter />
