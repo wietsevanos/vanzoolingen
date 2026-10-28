@@ -9,9 +9,6 @@ const navLinks = [{
   id: 'assortiment',
   label: 'Assortiment'
 }, {
-  // Nieuwslink staat uit zolang de nieuwssectie verborgen is.
-  // { id: 'nieuws', label: 'Nieuws' },
-}, {
   id: 'waarom',
   label: 'Waarom Wij'
 }, {
